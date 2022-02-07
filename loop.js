@@ -591,7 +591,12 @@
 // let result = b + c
 // console.log(result)
 
+
+
+// if else раздел 30-31
+
 // let test = 10;
+
 
 // if( test > 10) {
 //     console.log('верно')
@@ -658,22 +663,64 @@
 // }
 
 
+// let test1 = '3'
+// let test2 = '3'
+
+// if(test1 === test2) {
+//     console.log('верно')
+// }else{
+//     console.log('неверно')
+// }
+
+
+// let test1 = 3;
+// let test2 = '3';
+		
+// if (test1 == test2) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+// let test1 = 3;
+// let test2 = '3';
+		
+// if (test1 === test2) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
+// let test1 = '3';
+// let test2 = '3';
+		
+// if (test1 != test2) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+// let test1 = '3';
+// let test2 = '3';
+		
+// if (test1 !== test2) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
-
-
-
-
-
-
-
-
-
-
+// let test1 = 3;
+// let test2 = '3';
+		
+// if (test1 !== test2) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
