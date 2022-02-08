@@ -912,6 +912,603 @@
 
 
 
+// 30 РАЗДЕЛ КОНСТРУКЦИЯ if else и булевы значения
+
+// let test = true;
+
+// if (test == true) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+// let test = false 
+
+// if (test == false) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+
+
+// let test = 1
+
+// if(test == true) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+// let test = 0
+
+// if (test == true) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+// let test = 1;
+
+// if (test == false) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+// let test = 1
+
+// if (test != true)  { //не равно 
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+// let test = '';
+
+// if (test == false) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+// let test;
+ 
+// if (test == true) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+// let test = 3 * 'a'; 
+
+// if( test == true) {
+//     console.log('верно')
+
+// } else {
+//     console.log('неверно')
+// }
+// //  console.log(test )
+
+
+
+// let test = true;
+
+// if(test != true) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+// let test = true
+
+// if( test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+
+// let test = true;
+
+// if(!test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+// let test = true;
+
+// if (test == false) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+// let test = 3
+
+// if( test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+
+
+
+
+// let test = 'abs';
+
+// if (test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+
+// let test = '';
+
+// if(test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+
+
+// let test = 3 * 'abs'; //NaN
+
+// if ( test) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
+
+
+// let test = null;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+
+
+// let test = false;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+
+// let test;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+
+
+
+// let test = 0;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+
+// let test = '0';
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+// let test = -0;
+
+// if (test) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
