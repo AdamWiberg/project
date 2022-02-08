@@ -1147,20 +1147,29 @@
 
 
 
+// РАЗДЕЛ 31 Сокращенный синтаксис if-else в JavaScript
+
+
+// let test = 10; 
+
+// if(test == 10) {
+//     console.log('верно')
+// }
 
 
 
 
+// let test = 0;
+
+// if(test == 0) {
+//     console.log('верно')
+// } else console.log('неверно')
 
 
 
+// let test = 0;
 
-
-
-
-
-
-
+// if (test == 0) console.log('верно')
 
 
 
