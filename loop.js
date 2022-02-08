@@ -1174,18 +1174,40 @@
 
 
 
+//32 РАЗДЕЛ Комбинации конструкций if-else в JavaScript
+
+// let day = 1;
+
+
+// if (day >= 1 && day <= 10) {
+//     console.log('первая декада')
+// } else if (day >= 11 && day <= 20) {
+//     console.log('вторая декада')
+// } else if (day >= 21 && day <= 31) {
+//     console.log('третья декада')
+// } else {
+//     console.log('неизвестная декада')
+// }
 
 
 
 
+// let num = 96;
 
-
-
-
-
-
-
-
+// if (num >= 10 && num <= 99) {
+//     let numStr = num.toString();
+//     let strArr = numStr.split('');
+//     let summ = 0;
+//     for (let i = 0; i < strArr.length; i++) {
+//         summ += Number(strArr[i]);
+//     }
+//     //console.log(summ)
+//     if (summ <= 9) {
+//         console.log('цифра одназначна');
+//     } else {
+//         console.log('сумма цифр двузначна');
+//     }
+// }
 
 
 
