@@ -1178,7 +1178,10 @@
 
 // let day = 1;
 
+switch(day) {
+    case 1:
 
+}
 // if (day >= 1 && day <= 10) {
 //     console.log('первая декада')
 // } else if (day >= 11 && day <= 20) {
@@ -1211,29 +1214,103 @@
 
 
 
+// 33 раздел Область видимости let и var в if-else
+
+
+
+// let age = 17;
+// let adult;
+// if (age >= 18) {
+// 	adult = true;
+// } else {
+// 	adult = false;
+// }
+
+// console.log(adult);
+
+
+// let age = 17;
+// let adult;
+
+// if (age >= 18) {
+// 	 adult = true;
+// } else {
+// 	 adult = false;
+// }
+
+// console.log(adult);
 
 
 
 
 
+// let age = 17;
+// let adult;
+
+// if (age >= 18) {
+// 	adult = true;
+// } else {
+// 	adult = false;
+// }
+
+// console.log(adult);
+
+
+// let age = 24;
+// let result;
+
+// if (age >= 18) {
+// 	if (age <= 23) {
+// 		 result = 'от 18 до 23';
+// 	} else {
+// 		 result = 'больше 23';
+// 	}
+// } else {
+// 	 result = 'меньше 18';
+// }
+
+// console.log(result);
+
+
+// let age = 24;
+// let result;
+
+// if (age >= 18) {
+// 	//let result;
+	
+// 	if (age <= 23) {
+// 		result = 'от 18 до 23';
+// 	} else {
+// 		result = 'больше 23';
+// 	}
+// } else {
+// 	result = 'меньше 18';
+// }
+
+// console.log(result);
+
+
+// let num = 1;
+		
+// if (num == 1) {
+// 	var result = 'верно';
+// } else {
+// 	var result = 'неверно';
+// }
+
+// console.log(result);
 
 
 
+// let num = 1;
+		
+// if (num == 1) {
+// 	a = 'верно';
+// } else {
+// 	a = 'неверно';
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// console.log(a);
 
 
 
