@@ -722,74 +722,180 @@
 // 	alert('неверно');
 // }
 
+// РАЗДЕЛ 32 Сложные условия в if-else в JavaScript && ||
 
+// let num = 6
 
+// if (num > 0 && num < 5) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
 
+// let num = 10;
+// if (num >= 10 && num <= 20) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num1 = 1;
 
+// let num2 = 3;
 
+// if(num1 <= 1 && num2 >= 3) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num1 = 10;
+// let num2 = -5;
 
+// if (num1 > 0 || num2 > 0) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
+// let num1 = -10;
 
+// let num2 = -10;
 
+// if( num1 >= 0 || num2 >= 0) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num1 = 0
 
+// let num2 = 0;
 
+// if (num1 >= 0 || num2 >= 0) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
 
+// let num1 = 0;
+// let num2 = 5;
 
+// if (num1 >= 0 || num2 >= 0) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
+// let num1 = 5
+// let num2 = 5
 
+// if (num1 >= 0 || num2 >= 0) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num1 = -5;
+// let num2 = 15;
 
+// if (num1 >= 0 || num2 >= 0) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
 
 
+// let num = 1
 
+// if (num == 0 || num == 1) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num = 2
 
+// if(num == 0 || num == 1) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
+// let num = 2;
 
+// if(num == 0 || num == 1 || num == 2) {
+//     console.log('верно')
+// } else {
+//     console.log('неверно')
+// }
 
 
 
+// let num = 3;
 
 
+// if (num > 0 && num < 5 || num > 10 && num < 20) {
+// 	console.log('верно');
+// } else {
+// 	console.log('неверно');
+// }
 
+// function isInRange(num, from, to) {
+//     return num > from && num < to
+// } 
 
 
+// if (isInRange(num, 0, 5) || isInRange(num, 10, 20)) {
+// 	console.log('верно');
+// } else {
+// 	console.log('неверно');
+// }
 
 
 
+// let num = 3;
+		
+// if (num > 5 && num < 10 || num == 20) { 
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
+// let num = 3;
+		
+// if (num > 5 || num > 0 && num < 3) {
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
 
-
-
-
-
-
-
-
-
-
+// let num = 3;
+		
+// if (num == 9 || num > 10 && num < 20 || num > 20 && num < 30) { 
+// 	alert('верно');
+// } else {
+// 	alert('неверно');
+// }
 
 
 
