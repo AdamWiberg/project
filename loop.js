@@ -1178,10 +1178,10 @@
 
 // let day = 1;
 
-switch(day) {
-    case 1:
+// switch(day) {
+//     case 1:
 
-}
+// }
 // if (day >= 1 && day <= 10) {
 //     console.log('первая декада')
 // } else if (day >= 11 && day <= 20) {
@@ -1314,26 +1314,80 @@ switch(day) {
 
 
 
+// 34 раздел  Примеры использования if-else в JavaScript
+
+
+
+// let min = 65; 
+
+// if (min >= 0 && min <= 19) {
+//     console.log('1 треть ');
+// } else if (min >= 20 && min <= 39) {
+//     console.log('2 треть');
+// } else if (min >= 40 && min <= 59) {
+//     console.log('3 треть');
+// } else {
+//     console.log('выход за диапозон');
+// }
+
+
+// let arr = [1, 5, 10];
+// let result = 0;
+// let len = arr.length;
+// if (len == 3) {
+//     for(let i = 0; i < len; i++) {
+//         result += arr[i];
+//     }
+// }
+    
+// console.log(result)
+
+//Дано целое число. 
+//Напишите условие, которое проверит, 
+//равна ли последняя цифра этого числа нулю.
+
+// let num = 500;
+// let str = String(num);
+
+// if (String[2] == 0) {
+//     console.log('верно');
+// } else {
+//     console.log('неверно');
+// }
+
+
+// let num = 36;
+//    // 10 / 3 = 3,333333
+//    // 10 / 3 = 333333
+//         if (num % 2 == 0) { 
+//             console.log('четное: ' + num);
+//         } else {
+//             console.log('нечетное: ' + num);
+//         }
+    
 
 
 
 
+// let num = 247;
+
+// let result = num % 247;
+
+// if (result % 2) {
+//     console.log('четное число');
+// } else {
+//     console.log('делится с остатком ' + result % 2);
+// }
 
 
 
+// let num = 9;
 
-
-
-
-
-
-
-
-
-
-
-
-
+// if (num  % 3 == 0) {
+//     console.log('делится нацело');
+// } else {
+//     console.log('делится с остатком');
+// }
 
 
 
