@@ -1526,15 +1526,36 @@
 
 
 
+// 38 раздел, Логические операции в JavaScript
 
 
 
+// let a = 2 * ( 3 - 1);
+// let b = 6 - 2;
+
+// let result = a == b;
+// console.log(result)
+// if (a == b) {
+//     console.log('равны')
+// } else {
+//     console.log('не равны')
+// }
+
+// let a = 5 * (7 - 4);
+// let b = 1 + 2 + 7;
+
+// let result = a > b;
+
+// console.log(result)
 
 
 
+// let a = 2 ** 4; // 16
+// let b = 4 ** 2; // 16  16 неравно 16
 
+// let result = a != b;
 
-
+// console.log(result)
 
 
 
