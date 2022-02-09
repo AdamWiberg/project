@@ -1514,6 +1514,15 @@
 
 
 
+//37 раздел, Тернарный оператор в JavaScript
+
+
+// let result = 1;
+// let num = result >= 0 ? true: false;
+
+// let result = -1;
+// let num = result <= 0 ? true: false;
+// console.log(num)
 
 
 
