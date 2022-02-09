@@ -1391,27 +1391,96 @@
 
 
 
+// let month = 1;
+
+// if (month == 1) {
+//     console.log('Январь');
+// } else if (month == 2) {
+//     console.log('Февраль');
+// } else if (month == 3) {
+//     console.log('Март');
+// } else if (month == 4) {
+//     console.log('Апрель');
+// } else if (month == 5) {
+//     console.log('май');
+// } else if (month == 6) {
+//     console.log('Июнь');
+// } else if (month == 7) {
+//     console.log('Июль');
+// } else if (month == 8) {
+//     console.log('Август');
+// } else if (month == 9) {
+//     console.log('Сентябрь');
+// } else if (month == 10) {
+//     console.log('Октябрь');
+// } else if (month == 11) {
+//     console.log('Ноябрь');
+// } else if (month == 12) {
+//     console.log('Декабрь');
+// } else {
+//     console.log('Задайте число от 1 до 12');
+// }
 
 
 
+// let str = 'abcde';
+// let result = '';
+// for (let i = 0; i < str.length; i++) {
+//      result = str[i];
+   
+//   //  console.log(result)
+//      if (result == 'a') {
+//         console.log('Да');
+//         break;
+//     } else {
+//         console.log('Нет');
+//     }
+
+// }
+    
+
+// let num = 67845;
+// let res = num.toString();
+// let firstLetter = res[0];
+// if (firstLetter == 1 || firstLetter == 2 || firstLetter == 3) {
+//     console.log('верно');
+// } else {
+//     console.log('Неверно');
+// }
+        
+        
+
+// let num = 486;
+// let number = num.toString();
+// let result = 0;
+// for (let i = 0; i < number.length; i++) {
+//     result += Number(number[i]);
+ 
+   
+// }
+//    console.log(result)
 
 
+// let num = 123123;
+// let res = num.toString();
+// let firstSumm = 0;
+// for (let i = 0; i < 3; i++) {
+//     firstSumm += Number(res[i]);
+  
+    
+// }
+// let secondSumm = 0;
+// for (let i = 3; i < 6; i++) {
+//     secondSumm += Number(res[i]);
+ 
 
+// }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// if (result == resNumber) {
+//     console.log('Сумма равна трех цифр');
+// } else {
+//     console.log('Сумма неравна трех цифр');
+// }
 
 
 
