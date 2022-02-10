@@ -1563,34 +1563,59 @@
 // 39 раздел, Функция confirm в JavaScript
 
 
-// let user = confirm('Вам есть 18 лет?');
+// let isAdult = confirm('Вам есть 18 лет?');
 
-// if(user) {
+// if(isAdult) {
 //     alert('Текст для взврослых');
 // } else {
 //     alert('Доступ пользователю запрещен');
 // }
 
 
+// 40 раздел, Цикл while в JavaScript
+
+
+// let num = 0;
+// while(num <= 60) {
+//    console.log(num);
+//    num++
+// }
+
+
+// let num = 11;
+
+// while(num <= 33) {
+//     console.log(num);
+//     num++
+// }
 
 
 
+// let i = 2;
+
+// while(i <= 100) {
+//     console.log(i);
+//     i += 2; //прибавляет +2
+// }
 
 
 
+// let i = 0;
+
+// while(i <= 99) {
+//     i++
+//     if(i % 2) {
+//         console.log(i)
+//     }
+// }
 
 
+// let i = 30;
 
-
-
-
-
-
-
-
-
-
-
+// while (i >= 1) {
+//     console.log(i);
+//     i--
+// }
 
 
 
