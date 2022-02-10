@@ -1679,20 +1679,35 @@
 //     console.log(i);
 // }
 
+// 43 раздел, Накопление результата в цикле JavaScript
 
 
 
+// let result = 0;
+
+// for (let i = 1; i <= 20; i++) {
+//     result += i;
+// }
+//  console.log(result);
 
 
 
+// let result = 0;
+// for(let i = 2; i <= 100; i++) {
+//     result += i;
+// } 
 
+// console.log(result);
 
+// let result = 0;
 
+// for (let i = 1; i <= 99; i++) {
+//     if (i % 2) {
+//        result += i;
+//     }
+// }
 
-
-
-
-
+// console.log(result)
 
 
 
