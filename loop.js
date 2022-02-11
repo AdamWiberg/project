@@ -1711,56 +1711,125 @@
 
 
 
+// 44 раздел, Цикл for для массивов в JavaScript
+
+
+
+
+// let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// for(let i = 0; i < arr.length; i++) {
+//     console.log(i)
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for(let i = 0; i <= arr.length - 1; i++) {
+//     console.log(arr[i]);
+// }
+
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for(let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2 != 0) {
+//         console.log(arr[i])
+//     }
+// }
+
+
+// let result = 0;
+// let arr = [1, 2, 3, 4, 5];
+
+// for(let i = 0; i < arr.length; i++) {
+//     result += arr[i];
+// }
+//  console.log(result)
+
+
+
+// let sum = 0;
+// let arr = [1, 2, 3, 4, 5]; // 1 + 4 + 9 + 16 + 25 = 55
+
+// for(let i = 0; i < arr.length; i++) {
+//     let val = arr[i] * arr[i];
+//     sum += val;
+// }
+
+// console.log(sum)
+
+
+// let arr = [2, 5, 9, 15, 1, 4];
+
+//     for(let i = 0; i < arr.length; i++) {
+//         let val = arr[i];
+//         if(val > 3 && val < 10) {
+//             console.log(val)
+//         }
+//     }
+
+
+// let result = 0;
+// let arr = [1, 5, -2, 3, -4, 6, -2];
+
+//     for(let i = 0; i < arr.length; i++) {
+//         let val = arr[i];
+//         if (val > 0) {
+//             result += val;
+//         }
+//     }
+//         console.log(result)
+
+
+// let result = 0;
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arr.length; i++) {
+//     result += arr[i];
+    
+// }
+// result /= arr.length;
+// console.log(result)
+
+
+// let arr = [10, 20, 30, 50, 235, 3000];
+
+// for(let i = 0; i < arr.length; i++) {
+//     let result = String(arr[i]);
+//     let char = result[0]
+//     if (char == 1 || char == 2 || char == 5) {
+//     console.log(char);
+// }
+// }
+
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+//   arr.reverse();
+//   console.log(arr); // обратный порядок
+
+// let result = 0;
+// let arr = [1, 4, 2, 5, 4, 7, 6];
+
+//     for (let i = 0; arr.length; i++) {
+//         result = arr[i];
+//         if (result == i) {
+//            console.log(result)
+        
+//         }
+//     }
 
 
 
 
 
+// let arr = [1, 3, 5, 7, 9];
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// for (let i = 0; i < arr.length; i++) {
+//     document.write(arr[i] + '<br>'); //абзац
+// }
 
 
 
