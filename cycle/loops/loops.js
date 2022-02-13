@@ -63,3 +63,31 @@
 // }
 
 // console.log(arr) //нечетные числа от 1 до 99
+
+
+
+
+// 60 раздел Изменение массива в цикле JavaScript
+
+
+
+// let arr = [2, 4, 5, 7, 9];
+
+// for(let i = 0; i < arr.length; i++) {
+//     arr[i] **= 2;
+// }
+
+// console.log(arr) // числа в квадрат
+
+
+let arr = [2, 4, 6, 8, 10];
+
+// for(let i = 0; i < arr.length; i++) {
+//     arr[i] -= 1;
+// }
+
+for(let i = 0; i < arr.length; i++) {
+    arr[i] += 10;
+}
+
+console.log(arr);
