@@ -33,15 +33,67 @@
 
 
 
-let arr = ['a', 'b', 'a', 'b', 'c', 'a', 'c', 'd'];
+// let arr = ['a', 'b', 'a', 'b', 'c', 'a', 'c', 'd'];
 
-let count = {};
+// let count = {};
 
-for (let elem of arr) {
-    if (count[elem] === undefined) {
-        count[elem] = 1;
-    } else {
-        count[elem]++
-    }
+// for (let elem of arr) {
+//     if (count[elem] === undefined) {
+//         count[elem] = 1;
+//     } else {
+//         count[elem]++
+//     }
+// }
+// console.log(count)
+
+
+
+
+
+
+
+
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for(var i = 0; i <= arr.length - 1; i++) {
+//    let value = arr[i + 1];
+// //    let val = arr[i - 2];
+//    if(value != undefined) {
+//        console.log(value + arr[i]);
+//    }
+   
+// }
+
+
+
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 2; i < arr.length; i++) {
+//     let value = arr[i - 2];
+//     console.log(value);
+//     console.log(arr[i - 1]);
+// }
+
+
+
+
+
+
+
+
+
+let arr = [1, 2, 3, 4, 5];
+
+for (let i = 1; i < arr.length - 1; i++) {
+    let value = arr[i];
+    let prev = arr[i - 1];
+    let next = arr[i + 1];
+    let sum = value + prev + next;
+    console.log(sum);
 }
-console.log(count)
+
+
