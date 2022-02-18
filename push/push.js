@@ -85,41 +85,60 @@
 
 
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-let result = [];
-for(let elem of arr) {
-    if(elem % 2 != 0) { // нечетные числа
-        result.push(elem);
-    }
-}
-console.log(result);
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let result = [];
+// for(let elem of arr) {
+//     if(elem % 2 != 0) { // нечетные числа
+//         result.push(elem);
+//     }
+// }
+// console.log(result);
 
 
+// 79 раздел Методы для массивов в JavaScript Работа с push, unshift
 
 
 
 
+// push добавляет неограниченное количество элементов в 
+// конец массива. При этом исходный массив изменяется, 
+// а результатом возвращается новая длина массива.
 
 
+// unshift добавляет неограниченное количество новых 
+// элементов в начало массива. При этом исходный массив 
+// изменяется, а результатом возвращается новая длина массива.
 
 
 
+let arr = [1, 2, 3, 4, 5];
 
+// arr.push(4, 5, 6);
 
+// console.log(4, 5, 6)
 
+// arr.unshift(4, 5, 6);
+// console.log(arr)
 
 
 
 
+// shift удаляет первый элемент из массива. 
+// При этом исходный массив изменяется, а результатом 
+// метода возвращается удаленный элемент.
 
 
 
 
+// pop удаляет последний элемент из массива. 
+// При этом исходный массив изменяется, а результатом 
+// метода возвращается удаленный элемент.
 
 
 
 
 
+// console.log(arr.shift())
 
 
 
@@ -128,36 +147,46 @@ console.log(result);
 
 
 
+// slice вырезает и возвращает указанную часть массива.
 
 
 
 
 
+// console.log(arr.slice(0, 3))
 
+// let result = []
+//  result = arr
+// console.log(result.slice(3, 5) )
 
 
+// splice удаляет или добавляет элементы в массив
 
 
 
+// arr.splice(1, 2);
 
+// console.log(arr)
 
+// arr.splice(3, 0, 'a', 'b', 'c')
+// console.log(arr)
 
 
+// arr.splice(1, 0, 'a', 'b')
+// arr.splice(6, 0, 'c');
+// arr.splice(8, 0, 'e');
 
+// console.log(arr)
 
 
 
+// arr.indexOf(3)
+// console.log(arr.indexOf(3))
 
 
 
 
-
-
-
-
-
-
-
+console.log(arr.includes(7))
 
 
 

@@ -141,10 +141,10 @@ console.log(r)
 
 
 
-// let arr = [1, 2, 3];
-// let str = arr.join('-');
+let arr = [1, 2, 3];
+let str = arr.join('-');
 
-// console.log(str);
+console.log(str);
 
 
 
