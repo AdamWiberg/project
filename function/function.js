@@ -100,3 +100,239 @@ function func(num1 = 2, num2 = 0) {
 func(2, 3); // 5
 func(3); // 3
 func(); // 2
+
+
+
+
+//85 Примеры на создание функций в JavaScript
+
+
+function getSum(arr) {
+    let sum = 0;
+   
+    for (let elem of arr) {
+        sum += elem * elem;
+    }
+    return sum;
+}
+
+
+let arr1 = [1, 2, 3, 4, 5]; // 1, 4, 9, 16, 25
+let arr2 = [6, 7, 8, 9, 10];
+
+
+console.log(getSum(arr1));
+console.log(getSum(arr2));
+
+
+
+
+function getDigitsSum(num) {
+    let str = String(num);
+    let result = 0;
+
+    for (let i = 0; i < str.length; i++){
+        result += Number(str[i]);
+    }
+    return result;
+}
+
+console.log(getDigitsSum(587)) // сумма цифр 20
+
+
+
+
+
+
+
+
+function getDivisors(num) {
+    let arr = [];
+
+    for (let i = 1; i <= num; i++) {
+        if (num % i == 0) {
+          arr.push(i);
+        } else {
+            console.log('Число ' + num + ' не делится на ' + i)
+        }
+    } 
+    return arr;
+}
+ console.log(getDivisors(10))
+ console.log(getDivisors(20))
+
+
+
+
+
+
+
+function reverseStr(str) {
+    return str.split('').reverse().join('')
+}
+ 
+console.log(reverseStr('24reverse')) // перевот
+
+
+
+
+
+
+
+
+
+
+function delElem(meaning, arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if (meaning == arr[i]) {
+            arr.splice(i, 1)
+        }
+    }
+    return arr;
+}
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(delElem(3, arr)) // удаление
+
+
+
+
+
+
+
+
+
+
+function array(num1, num2) {
+    let arr = [];
+    for (let i = num1; i <= num2; i++) {
+        arr.push(i);
+        
+    }
+    return arr;
+}
+ console.log(array(1, 16))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
