@@ -42,14 +42,16 @@ console.log(isPositive(num))
 
 
 
-function check(arr) {
+function isArrayHaveSameValues(arr) {
     for(let i = 0; i < arr.length; i++) {
-        if (arr[i] === arr[i - 1]) {
-            return true;
+        for(let j = i; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                return true;
+            }
         }
     }
     return false;
 }
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr = [1, 2, 3, 4, 8, 6, 7, 8, 9, 10];
 
-console.log(check(arr));
+console.log(isArrayHaveSameValues(arr));

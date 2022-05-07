@@ -29,7 +29,7 @@ sum();
 function cube(num) {
    var num = Math.pow(num, 3);
    alert(num)
-  
+
 }
 
 cube(5);
@@ -109,7 +109,7 @@ func(); // 2
 
 function getSum(arr) {
     let sum = 0;
-   
+
     for (let elem of arr) {
         sum += elem * elem;
     }
@@ -170,7 +170,7 @@ function getDivisors(num) {
 function reverseStr(str) {
     return str.split('').reverse().join('')
 }
- 
+
 console.log(reverseStr('24reverse')) // перевот
 
 
@@ -208,7 +208,7 @@ function array(num1, num2) {
     let arr = [];
     for (let i = num1; i <= num2; i++) {
         arr.push(i);
-        
+
     }
     return arr;
 }
@@ -222,6 +222,56 @@ function array(num1, num2) {
 
 
 
+// Правильное использование функций JavaScript
+
+
+function isPrime(num) {
+	for (let i = 2; i < num; i++) {
+		if (num % i == 0) {
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function searchSimpleNumbers(fromNum, toNum) {
+    for ( let i = fromNum; i < toNum; i++) {
+        if (isPrime(i)) {
+            console.log('Найдено простое число ' + i)
+        }
+    }
+}
+searchSimpleNumbers(3, 50)
+
+
+
+
+
+
+
+function getDigitsSum(num) {
+    let sum = 0;
+    let digits = String(num).split('');
+
+    for (let digit of digits) {
+        sum += Number(digit);
+    }
+    return sum;
+} 
+
+
+function getDigitsSums(fromYear, toYear, sum) {
+    let digitSums = [];
+    for (let i = fromYear; i < toYear; i++) {
+        let digitSum = getDigitsSum(i);
+        if (digitSum == sum) {
+            digitSums.push(i);
+        }
+    }
+    return digitSums;
+}
+ console.log(getDigitsSums(1000, 2030, 15));
 
 
 
@@ -231,30 +281,47 @@ function array(num1, num2) {
 
 
 
+function reverseNum(num) {
+    return String(num).split('').reverse().join('');
+}
 
 
 
 
 
+let arr = [123, 456, 789];
+let result = [];
+for(let num of arr) {
+        result.push(reverseNum(num));
+}
+
+
+console.log(result)
 
 
 
 
 
+function getDigitsSum(num) {
+    let sum = 0;
+    let digits = String(num).split('');
 
+    for (let digit of digits) {
+        sum += Number(digit);
+    }
+    return sum;
+}
 
+function getDigitsSums(fromNum, toNum) {
 
+    if (getDigitsSum(fromNum) === getDigitsSum(toNum)) {
+        console.log('сумма совпадает');
+    } else {
+        console.log('не совпадает');
+    }
 
-
-
-
-
-
-
-
-
-
-
+}
+getDigitsSums(234, 531)
 
 
 

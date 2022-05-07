@@ -2,25 +2,29 @@
 
 
 
-// let arr = [];
-// let str = '';
+let arr = [];
+let str = '';
 
-// for(let i = 0; i < 5; i++) {
-//     str += 'xx';
-//     arr.push(str);
-// }
+for(let i = 0; i < 5; i++) {
+    str += 'xx';
+    arr.push(str);
+}
 
-// console.log(arr); // заполнение массива 'xx'
+console.log(arr); // заполнение массива 'xx'
 
 
-// let arr = [];
 
-// for (let i = 1; i <= 5; i++) {
-//     let str = '';
 
-//     for (let j = 0; j < 5; j++) {
-//         str += i;
-//     }
-//     arr.push(str);
-// } 
-// console.log(arr); // заполнение массива с 5 числами
+
+
+let arr = [];
+
+for (let i = 1; i <= 5; i++) {
+    let str = '';
+
+    for (let j = 0; j < 5; j++) {
+        str += i;
+    }
+    arr.push(str);
+} 
+console.log(arr); // заполнение массива с 5 числами
