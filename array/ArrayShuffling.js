@@ -22,7 +22,7 @@ function shuffle (arr) {
 // Запись в массив в разброс
           result.push(elem);
     }
-    
+     
        
 return result
 }
@@ -63,6 +63,7 @@ function rangeRand (num1, num2) {
  return shuffle (re) 
 
 }
+// вывод
  console.log(rangeRand(1, 12))
 
 
