@@ -12,7 +12,7 @@ function random (arr) {
 
 
 
-let arr = [1, 3, 5, 7];
+var arr = [1, 3, 5, 7];
 
 
 
@@ -41,3 +41,38 @@ function add (sum1, sum2, sum3) {
 }
 
 console.log(add(sum1, sum2, sum3))
+
+// ---------------------------------------------------------------------------
+
+
+// Случайные элемента из массива 
+function randoms (arr, length) {
+    return first (shuffle(arr), length);
+}
+
+// создает новый массив
+function first (arr, length) {
+    return arr.slice(0, length);
+}
+
+let result =[];
+function shuffle (arr) {
+    
+    while(arr.length > 0) {
+       
+         let random = getRandomInt(0, arr.length - 1)
+         // вырезает элемент из массива
+          let elem = arr.splice(random, 1)[0]
+
+// Запись в массив в разброс
+          result.push(elem);
+    }
+     
+       
+return result
+}
+
+
+
+
+console.log(randoms(arr, 3))
