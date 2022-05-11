@@ -36,6 +36,6 @@ function normalizeLucky (num) {
     return str;
 }
 
-console.log(getLuckyTickets())
+console.log(getLuckyTickets(1001))
 // console.log(isLucky(120021));
 // console.log(isLucky(1001));
