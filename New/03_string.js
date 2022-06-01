@@ -1,33 +1,33 @@
-// const name = 'Владилен'
-// const age = 26
-//
-// function getAge() {
-//   return age
-// }
+const name = 'Владилен'
+const age = 26
 
-// const output = 'Привет, меня зовут ' + name + ' и мой возраст ' + age + ' лет.'
-// const output = `Привет, меня зовут ${name} и мой возраст ${age < 30 ? 'A' : 'B'} лет.`
-// const output = `
-//   <div>This is div</div>
-//   <p>this is o</p>
-// `
+function getAge() {
+  return age
+}
 
-// console.log(output)
+const output = 'Привет, меня зовут ' + name + ' и мой возраст ' + age + ' лет.'
+const output = `Привет, меня зовут ${name} и мой возраст ${age < 30 ? 'A' : 'B'} лет.`
+const output = `
+  <div>This is div</div>
+  <p>this is o</p>
+`
 
-// const name = 'Владилен'
-// console.log(name.length)
-// console.log(name.toUpperCase())
-// console.log(name.toLowerCase())
-// console.log(name.charAt(2))
-// console.log(name.indexOf('!'))
-// console.log(name.toLowerCase().startsWith('влад'))
-// console.log(name.startsWith('Влад'))
-// console.log(name.endsWith('ен!'))
-// console.log(name.repeat(3))
-// const string = '     password      '
-// console.log(string.trim())
-// console.log(string.trimLeft())
-// console.log(string.trimRight())
+console.log(output)
+
+const name = 'Владилен'
+console.log(name.length)
+console.log(name.toUpperCase())
+console.log(name.toLowerCase())
+console.log(name.charAt(2))
+console.log(name.indexOf('!'))
+console.log(name.toLowerCase().startsWith('влад'))
+console.log(name.startsWith('Влад'))
+console.log(name.endsWith('ен!'))
+console.log(name.repeat(3))
+const string = '     password      '
+console.log(string.trim())
+console.log(string.trimLeft())
+console.log(string.trimRight())
 
 function logPerson(s, name, age) {
   if (age < 0) {
