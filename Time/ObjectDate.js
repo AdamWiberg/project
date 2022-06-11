@@ -10,9 +10,9 @@ console.log(date.getDate());     // день
 console.log(date.getHours());    // часы
 console.log(date.getMinutes());  // минуты
 console.log(date.getSeconds());  // секунды
+ 
 
-
-let date = new Date()
+let date = new Date() 
 
 console.log(date.getDate());
 console.log(date.getMonth())
