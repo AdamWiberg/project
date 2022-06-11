@@ -180,7 +180,7 @@ let arr = ['Иван', 'Иванов', 'отдел разработки', 'пр�
 let [name, surname, department, position = 'джуниор'] = arr;
 
 
-console.log(position)
+console.log(position);
 
 
 
