@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = "eventTypes.js"></script>
+    <title>Document</title>
+    <h1>Hello World</h1>
+</head>
+<body>
+    <input id = "button" type = 'submit'> 
+
+    <input id="button1" type="submit" value="button1">
+ <input id="button2" type="submit" value="button2"> 
+
+ 
+<p id="elem1">text</p>
+<p id="elem2">text</p>
+<p id="elem3">text</p>
+<p id="elem4">text</p>
+<p id="elem5">text</p> 
+
+
+
+<!-- ----------------------------------------------------------- -->
+
+<p id = "elem1"> text  </p>
+ <p id = "elem2"> Обзац номер  </p>
+<p id = "elem3"> Обзац номер  </p> 
+<input id = 'button1' type = 'submit'>
+ <input id = 'button2' type = 'submit'>
+<p id="elem">text</p> 
+
+<script>
+       
+
+
+let button = document.querySelector('#button')
+console.log(button)
+
+button.addEventListener('mouseover', function() {
+    console.log('test')
+}) 
+	// alert('1'); // выведет по наведению
+
+button.addEventListener('mouseout', function() {
+    console.log('уход')
+}) 
+	// alert('2'); // выведет по уходу курсор
+
+
+
+let button1 = document.querySelector('#button')
+
+button1.addEventListener('click', function () {
+    console.log('heelow world')
+})
+
+
+
+
+// ----------------------------------------------------------------------
+
+
+                  // Именованные обработчики событий в JavaScript
+// ЗАДАЧА №1
+// <input id="button1" type="submit" value="button1">
+// <input id="button2" type="submit" value="button2">
+
+// Сделайте так, чтобы по клику на первую кнопку выполнилась функция func1,
+//  а по клику на вторую - функция func2.
+
+function func1() {
+	alert(1);
+}
+
+function func2() {
+	alert(2);
+}
+
+let button1 = document.querySelector('#button1')
+button1.addEventListener('click', func1)
+
+let button2 = document.querySelector('#button2')
+button2.addEventListener('click', func2)
+
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------------
+
+
+                   // Привязывание одного обработчика ко многим элементам
+
+// Привяжите эту функцию ко всем 5-ти абзацам.
+
+function func() {
+	alert('message');
+}
+let elem1 = document.querySelector('#elem1')
+elem1.addEventListener('click', func)
+elem2.addEventListener('click', func)
+elem3.addEventListener('click', func)
+elem4.addEventListener('click', func)
+elem5.addEventListener('click', func)
+
+
+
+// ----------------------------------------------------------
+
+// Несколько обработчиков одного события в JavaScript
+// Привяжите все эти функции к нашему абзацу.
+
+function func1() {
+	alert('1');
+}
+
+function func2() {
+	alert('2');
+}
+
+function func3() {
+	alert('3');
+}
+
+let button = document.querySelector('#elem')
+button.addEventListener('click', func1)
+button.addEventListener('click', func2)
+button.addEventListener('click', func3)
+
+
+
+                                 // ЗАДАЧА №2
+// Дана кнопка. Привяжите к ней три анонимных обработчика двойного клика по ней. 
+// Пусть первый обработчик выводит число 1, второй обработчик - число 2,
+//  а третий - число 3.
+
+let button = document.querySelector('#button')
+console.log(button)
+button.addEventListener('dblclick', function() {
+   alert('1')
+})
+button.addEventListener('dblclick', function() {
+  alert('2')
+})
+button.addEventListener('dblclick', function() {
+  alert('3')
+})
+
+
+
+
+
+
+// -----------------------------------------------------------
+
+
+// Работа с текстом тега на JavaScript
+
+// ЗАДАЧА №1
+// Даны два абзаца, содержащие своим текстом какие-то числа, и кнопка.
+//  По нажатию на кнопку выведите на экран сумму хранящихся чисел.
+
+var sum = 0
+
+let elems = document.querySelectorAll('#elem')
+let button = document.querySelector('#button')
+// let elem2 = document.querySelector('#elem2')
+
+
+button.addEventListener('click', function() {
+  //  console.log(button)
+    for (let i = 0; i < elems.length; i++) {
+ 
+
+   sum = sum + parseInt(elems[i].innerHTML)
+
+    
+
+  console.log(sum)
+}
+});
+
+
+// -------------------------------------------------------------------
+
+
+// ЗАДАЧА №2
+// Даны два абзаца и две кнопки. Пусть нажатие на первую кнопку выводит текст
+//  первого абзаца, а нажатие на вторую кнопку - текст второго абзаца.
+
+let button1 = document.querySelector('#button1')
+let button2 = document.querySelector('#button2')
+
+button1.addEventListener('click', function() {
+    alert('Обзац №1')
+})
+
+button2.addEventListener('click', function() {
+    alert('Обзац №2')
+})
+
+
+
+// --------------------------------------------------------------------------
+// ЗАДАЧА №3
+
+// Дан абзац и две кнопки. По нажатию на первую кнопку запишите в абзац слово 'привет',
+//  а по нажатию на вторую кнопку - слово 'пока'.
+
+let button1 = document.querySelector('#button1')
+let button2 = document.querySelector('#button2')
+
+button1.addEventListener('click', function() {
+ elem1.innerHTML = 'привет'
+})
+
+button2.addEventListener('click', function() {
+ elem2.innerHTML = 'пока'
+})
+
+
+
+
+// -------------------------------------------------------------------------------
+// ЗАДАЧА №4
+
+// Даны 3 абзаца с текстом. По нажатию на первый абзац запишите в его текст число 1,
+//  по нажатию на второй абзац запишите в его текст число 2, 
+//  а по нажатию на третий - запишите в его текст число 3.
+
+
+
+let elem1 = document.querySelector('#elem1');
+let elem2 = document.querySelector('#elem2');
+let elem3 = document.querySelector('#elem3');
+
+
+elem1.addEventListener('click', function() {
+  elem1.innerHTML = '1'
+})
+
+elem2.addEventListener('click', function() {
+  elem2.innerHTML = '2'
+})
+
+elem3.addEventListener('click', function() {
+  elem3.innerHTML = '3'
+})
+
+
+
+
+// ----------------------------------------------------------------------------------
+// // ЗАДАЧА №5
+// Дан абзац и кнопка. В абзаце записано какое-то число. 
+// По нажатию на кнопку возведите значение абзаца в квадрат и запишите его обратно.
+
+let button = document.querySelector('#button1');
+
+button.addEventListener('click', function(){
+
+    elem1.innerHTML = Math.pow(2, 2)
+})
+
+
+
+// ---------------------------------------------------------------------
+// ЗАДАЧА №6
+// Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца
+//  единицу и запишите полученное число обратно.
+
+let button = document.querySelector('#button1');
+let p = document.querySelector('p');
+
+button.addEventListener('click', function() {
+   let number = parseInt(p.innerText)
+   number++
+   p.innerText = number
+})
+
+
+
+// -----------------------------------------------------------------------------
+// Задача №7
+// Дан абзац с текстом и кнопка. По нажатию на кнопку запишите в конец текста 
+// абзаца восклицательный знак.
+
+let button = document.querySelector('#button1');
+let elem1 = document.querySelector('#elem1');
+button.addEventListener('click', function() {
+  
+})
+
+
+// --------------------------------------------------------------------------------
+// ЗАДАЧА №9
+// Дан абзац и кнопка. По нажатию на кнопку запишите в абзац текст '<i>hello</i>'.
+
+let button = document.querySelector('#button1');
+
+button.addEventListener('click', function() {
+    elem1.innerHTML += '<i>hello</i>'
+})
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №10
+// Дан абзац с текстом и кнопка. По нажатию на кнопку прочитайте текст абзаца, 
+// оберните этот текст в теги <b> и запишите новый текст обратно в абзац.
+
+    let button = document.querySelector('#button1');
+
+    button.addEventListener('click', function() {
+        elem1.innerHTML = '<b> ' + elem1.innerHTML + ' </b>'
+    })
+
+   </script>
+</body>
+</html>
+<!-- <h><string, number, boolean, null, undefined, symbol./h> -->
