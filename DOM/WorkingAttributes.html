@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Задача №1 -->
+    <input id="elem" type="email">
+    <input id = 'button' type = 'submit'>
+
+    <!-- ---------------------------------------------------------- -->
+
+
+    <!-- Задача №2 -->
+    <input id="elem" type="email">
+    <input id = 'button' type = 'submit'>
+
+
+    <!-- ----------------------------------------------------------------- -->
+
+
+    <!-- Задача №3 -->
+<a id = 'link' href = 'https://github.com/AdamWiberg/project/tree/master/DOM'></a>
+<input id = 'button' type = 'submit'>
+<p id = 'elem'>абзац</p>
+
+
+<!-- -------------------------------------------------------------------------------/ -->
+
+
+<!-- ЗАДАЧА №4 -->
+<p id = 'elem'>Text</p>
+<a id = 'link' href = 'vk.com'></a>
+<input id = 'button' type = 'submit'>
+
+
+<!-- ----------------------------------------------------------------------------------- -->
+
+
+<!-- Задача №5 -->
+
+
+<img id ='link' src="https://www.imgonline.com.ua/examples/bee-on-daisy.jpg" width="100px">
+<p id = 'elem'>Сейчас будет ссылка!</p>
+<input id = 'button' type = 'submit'>
+
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №6 -->
+
+<img id = 'link' src = 'https://www.imgonline.com.ua/examples/orange-flowers.jpg' width = '100px'>
+<input id = 'button' type = 'submit'>
+
+
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №7 -->
+
+<img id = 'link' src = 'https://help2site.ru/wp-content/uploads/2019/10/vneshnie-ssylki-na-sajt.jpg' width="100px">
+
+<input id = 'button' type = 'submit'>
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №8 -->
+
+
+<img id = 'link1' src = 'https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg' width = '100px'>
+<img id = 'link2' src = 'https://mobimg.b-cdn.net/v3/fetch/9d/9db2d4683d92f5f2045e9142fbd82633.jpeg' width = '100px'>
+
+<input id = 'button1' type = 'submit'>
+<input id = 'button2' type = 'submit'>
+
+<script>
+
+              // Работа с атрибутами тегов через свойства элементов
+
+// Задача №1
+
+// Дана также кнопка. По нажатию на кнопку выведите на экран содержимое атрибута type
+//  указанного выше инпута.
+
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    alert(elem.type);
+})
+
+
+
+// ------------------------------------------------------------------------
+
+
+// Задача №2
+
+// Дана также кнопка. По нажатию на кнопку запишите в атрибут type значение submit.
+
+let button = document.querySelector('#button')
+button.addEventListener('click', function() {
+    alert(button.type)
+})
+
+
+// ---------------------------------------------------------------------------
+
+
+// Задача №3
+// Пусть у вас есть ссылка в виде тега a, кнопка и абзац.
+//  По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки.
+
+let button = document.querySelector('#button');
+let elem = document.querySelector('#elem')
+
+button.addEventListener('click', function() {
+    elem.innerHTML =  link.href 
+})
+
+
+
+// -----------------------------------------------------------------------------------
+
+// ЗАДАЧА №4
+
+
+// Пусть у вас есть ссылка и кнопка. По нажатию на кнопку добавьте в конец текста
+//  ссылки содержимое ее атрибута href в круглых скобках.
+
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function () {
+    elem.innerHTML += ' ( ' + link.href + ' ) '
+})
+
+
+// -------------------------------------------------------------------------------
+
+// Задача №5
+
+// Пусть у вас есть картинка. Разместите ее на странице в помощью тега img. 
+// Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац
+//  записался путь к картинки из ее атрибута src.
+
+
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    elem.innerHTML = link.src
+})
+
+
+// --------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №6
+
+// Дана картинка в теге img и кнопка. По нажатию на кнопку в атрибут width
+//  запишите значение 300.
+
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function () {
+    button.innerHTML = link.width = 300
+})
+
+
+
+
+// -------------------------------------------------------------------------------------
+
+// ЗАДАЧА №7
+
+// Дана картинка в теге img и кнопка. Пусть в атрибуте width задана некоторая ширина.
+//  Сделайте кнопку, по нажатию на которую ширина картинки будет увеличиваться в 2 раза.
+
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    button.innerHTML = link.width *= 2
+})
+
+
+// ---------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №8
+
+// Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки.
+//  По нажатию на первую кнопку запишите в атрибут src путь к первой картинке,
+//   а по нажатию на вторую - путь ко второй картинке.
+
+
+let button1 = document.querySelector('#button1');
+let button2 = document.querySelector('#button2');
+
+button1.addEventListener('click', function() {
+    button1.innerHTML = link1.src = 'https://mobimg.b-cdn.net/v3/fetch/9d/9db2d4683d92f5f2045e9142fbd82633.jpeg'
+})
+
+button2.addEventListener('click', function() {
+    button2.innerHTML = link2.src = 'https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg'
+})
+
+    </script>
+</body>
+</html>
