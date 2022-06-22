@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фокус текстовых полей в JavaScript</title>
+</head>
+<body>
+    <!-- ЗАДАЧА №1 -->
+
+<input id = 'input' value = ''>
+
+
+<!-- ----------------------------------------------------------- -->
+
+
+    <!-- ЗАДАЧА №2 -->
+
+    <input id = 'input' value = ''>
+
+<!-- --------------------------------------------------------------- -->
+
+
+     <!-- ЗАДАЧА №3 -->
+     
+     <input id = 'input' value = 'Текст очистится'>
+
+    <script>
+
+
+                     // Фокус текстовых полей в JavaScript
+
+
+    // ЗАДАЧА №1
+
+    // Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2.
+
+    let input = document.querySelector('#input');
+    input.addEventListener('focus', function() {
+       input.value = '1'
+    })
+    input.addEventListener('blur', function () {
+        input.value = '2'
+    })
+
+
+// -------------------------------------------------------------------------------------------
+
+
+                                          // ЗАДАЧА №2
+
+// Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа.
+
+let input = document.querySelector('#input');
+input.addEventListener('blur', function() {
+    input.value = Math.pow(input.value, 2)
+})
+
+
+
+// ----------------------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №3
+// Дан инпут, в котором изначально есть какой-то текст. 
+// По получению фокуса инпутом очистите содержимое этого инпута.
+
+let input = document.querySelector('#input');
+
+input.addEventListener('focus', function () {
+    input.value =  ''
+})
+    </script>
+
+</body>
+</html>
