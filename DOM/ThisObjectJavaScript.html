@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объект this в JavaScript</title>
+</head>
+<body>
+                            <!-- Объект this в JavaScript -->
+    <!-- ЗАДАЧА №1 -->
+ 
+    <input id = 'input' value = 'text'>
+
+
+
+    <!-- ------------------------------------------------------------------ -->
+
+
+    <!-- ЗАДАЧА №2 -->
+
+    <input id = 'button' type = 'submit' value = '1'>
+
+
+
+    <!-- ---------------------------------------------------------------------------------- -->
+
+
+    <!-- ЗАДАЧА №3 -->
+
+    <p id = 'paragrah1'>Text1</p>
+    <p id = 'paragrah2'>Text2</p>
+    <p id = 'paragrah3'>Text3</p>
+    <p id = 'paragrah4'>Text4</p>
+    <p id = 'paragrah5'>Text5</p>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------- -->
+
+
+
+     <!-- ЗАДАЧА №4 -->
+
+     <input id = 'input1' value = "5">
+     <input id = 'input2' value = "10">
+     <input id = 'input3' value = "15">
+    <script>
+
+                              // Объект this в JavaScript
+
+    // ЗАДАЧА №1
+
+    // Дан инпут. По получению фокуса этим инпутом запишите в него число 1,
+    //  а по потери фокуса - число 2. Для обращения у инпуту внутри функции-обработчика
+    //   используйте объект this.
+
+        let input = document.querySelector('#input');
+
+        input.addEventListener('focus', function() {
+            this.value = '1'
+        })
+
+        input.addEventListener('blur', function() {
+            this.value = '2'
+        })
+
+
+
+        // ------------------------------------------------------------------------
+
+
+
+        // ЗАДАЧА №2
+
+    //     Дана кнопка, значением которой служит число 1.
+    //      Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз 
+    //      увеличивалось на единицу.
+
+            let button = document.querySelector('#button');
+            button.addEventListener('click', function() {
+                this.value++
+            })
+
+
+
+            // -----------------------------------------------------------------
+
+
+
+            // ЗАДАЧА №3
+
+            // Даны 5 абзацев с какими-то текстами. По клику на любой абзац запишите в конец его
+            //  текста восклицательный знак.
+
+            let paragrah1 = document.querySelector('#paragrah1');
+            let paragrah2 = document.querySelector('#paragrah2');
+            let paragrah3 = document.querySelector('#paragrah3');
+            let paragrah4 = document.querySelector('#paragrah4');
+            let paragrah5 = document.querySelector('#paragrah5');
+
+           paragrah1.addEventListener('click', func)
+           paragrah2.addEventListener('click', func)
+           paragrah3.addEventListener('click', func)
+           paragrah4.addEventListener('click', func)
+           paragrah5.addEventListener('click', func)
+
+           function func () {
+               this.innerHTML += '!'
+           }
+
+
+        // ----------------------------------------------------------------------------------------
+
+
+
+        // ЗАДАЧА №4
+
+
+        // Даны 3 инпута, в которых записаны какие-то числа. По потери фокуса в любом из инпутов
+        // возведите стоящее в нем число в квадрат.
+
+        let input1 = document.querySelector('#input1');
+        let input2 = document.querySelector('#input2'); 
+        let input3 = document.querySelector('#input3');
+
+        input1.addEventListener('blur', func);
+        input2.addEventListener('blur', func);
+        input3.addEventListener('blur', func);
+
+        function  func () {
+            this.value **= 2
+        }
+     </script>
+</body>
+</html>
