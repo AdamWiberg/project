@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с атрибутами через методы в JavaScript</title>
+</head>
+<body>
+           <!-- Работа с атрибутами через методы в JavaScript -->
+    
+<!-- ЗАДАЧА №1 -->
+
+<input id="elem" value="принимый">
+
+
+
+<!-- ЗАДАЧА №2 -->
+
+<input id="elem" class="www zzz">
+
+
+<!-- ---------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №3 -->
+
+<input id="elem">
+
+
+    
+<!-- --------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №4 -->
+
+<input id="elem">
+
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №5 -->
+
+
+<input id="elem" value="text">
+
+
+<!-- ------------------------------------------------------------------------------ -->
+
+<!-- ЗАДАЧА №6 -->
+
+<input id="elem" value="text">
+    <script>
+
+
+
+              // Работа с атрибутами через методы в JavaScript
+
+
+
+// getAttribute() возвращает значение указанного атрибута элемента.
+//  Если элемент не содержит данный атрибут, могут быть возвращены null или ""
+//   (пустая строка);
+
+// ЗАДАЧА №1
+
+// Получите значение его атрибута value.
+
+
+
+let input = document.querySelector('#elem');
+let value = input.getAttribute('value')
+
+console.log(value)
+
+
+// -------------------------------------------------------------------
+
+
+// ЗАДАЧА №2
+// Получите значение его атрибута class.
+
+let input = document.querySelector('#elem');
+
+let value = input.getAttribute('class');
+
+console.log(value)
+
+
+
+
+// ------------------------------------------------------------------
+
+
+// Метод setAttribute() предназначен для добавления в элемент нового атрибута 
+// с указанным значением. Если указанный атрибут уже существует, то значение
+//  этого атрибута изменяется на значение, переданное методу в качестве второго 
+//  аргумента.
+
+
+// ЗАДАЧА №3
+// Установите его атрибут value в значение 'text'.
+
+let input = document.querySelector('#elem');
+let value = input.setAttribute('value', 'text')
+
+
+
+// -------------------------------------------------------------------------
+
+// ЗАДАЧА №4
+
+// Установите ему атрибут class в значение 'valid'.
+
+let input = document.querySelector('#elem');
+input.setAttribute('class', 'valid')
+
+console.log(input)
+
+
+
+// ------------------------------------------------------------------------
+
+// УДАЛЕНИЕ removeAttribute
+
+// ЗАДАЧА №5
+
+let input = document.querySelector('#elem')
+console.log(input)
+input.removeAttribute('value');
+
+
+// -------------------------------------------------------------------------
+
+// ПРОВЕРКА hasAttribute
+
+// ЗАДАЧА №6
+
+// Проверьте наличие у него атрибута value.
+
+let input = document.querySelector('#elem');
+
+console.log(input.hasAttribute('type'))
+    </script>
+
+    
+
+</body>
+</html>
