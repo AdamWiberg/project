@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отвязывание событий через removeEventListener</title>
+</head>
+<body>
+                      <!-- Отвязывание событий через removeEventListener -->
+
+<!-- ЗАДАЧА №1 -->
+
+
+  <a href="UnbindingEvents.html" id = 'link'>Тест</a> 
+<p>e</p> 
+
+
+
+<!-- ---------------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №2 -->
+
+
+<input value="0" type = 'submit' id ='button'>
+    <script>
+
+                        // Отвязывание событий через removeEventListener
+
+    // ЗАДАЧА №1
+
+
+    // Дана ссылка. По нажатию на эту ссылку добавьте в конец ее текста содержимое ее
+    //  атрибута href в круглых скобках. Сделайте так, чтобы это добавление происходило лишь
+    //   по первому нажатию.
+
+
+
+    let link = document.querySelector('#link');
+let p = document.querySelector('p')
+    p.addEventListener('click', func); 
+
+    function func () {
+        p.innerHTML += '(' + link.href + ')'
+        console.log(p.href)
+    }
+
+        this.removeEventListener('click', func)
+
+
+
+// -----------------------------------------------------------------------------
+
+// ЗАдАЧА №2
+
+// Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее 
+// значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет
+//  10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие.
+
+let button = document.querySelector('#button');
+button.addEventListener('click', increase);
+
+function increase () {
+ let sum = button.value++
+ for (let i = 0; sum >= 10; i++) {
+    button.removeEventListener('click', increase);
+    break
+    
+ }
+
+  
+    
+}
+    </script>
+
+
+
+</body>
+</html>
