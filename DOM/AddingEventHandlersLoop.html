@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление обработчиков событий в цикле</title>
+</head>
+<body>
+              <!-- Добавление обработчиков событий в цикле -->
+
+<!-- ЗАДАЧА №1 -->
+
+<input type="text" >
+<input type="text" >
+<input type="text">
+
+
+
+<!-- ------------------------------------------------------------------------ -->
+
+
+<!-- ЗАДАЧА №2 -->
+
+<p>3</p>
+<p>5</p>
+<p>7</p>
+
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+
+                        <!-- Анонимные функции как обработчики событий -->
+
+
+
+<!-- ЗАДАЧА №3 -->
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+
+
+    <script>
+
+
+
+
+                // Добавление обработчиков событий в цикле
+
+// ЗАДАЧА №1
+
+// Даны также инпуты. Сделайте так, чтобы по потери фокуса в 
+// любом из наших инпутов выполнялась приведенная выше функция.
+
+
+// ДАНА функция
+
+
+let input = document.querySelectorAll('input');
+
+for (let inputs of input) {
+    inputs.addEventListener('blur', func);
+}
+
+
+function func() {
+	this.value = Number(this.value) + 1;
+}
+
+
+
+// ---------------------------------------------------------------------
+
+// ЗАДАЧА №2
+
+
+// Даны абзацы с числами. Сделайте так, чтобы по клику на 
+// любой абзац его число в нем возводилось в квадрат.
+
+
+let paragrah = document.querySelectorAll('p');
+    for(let paragrahs of paragrah) {
+        paragrahs.addEventListener('click', square);
+}
+
+function square () {
+    this.innerHTML **= 2
+}
+
+
+
+// --------------------------------------------------------------------------------------
+
+                    // Анонимные функции как обработчики событий
+
+
+
+    // ЗАДАЧА №3
+
+    // Сделайте функцию-обработчик анонимной.
+
+    let divs = document.querySelectorAll('div');
+
+for (let div of divs) {
+	div.addEventListener('click', function() {
+        this.innerHTML++
+    });
+}
+
+
+    </script>
+
+</body>
+</html>
