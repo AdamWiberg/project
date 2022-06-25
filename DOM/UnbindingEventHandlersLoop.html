@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отвязывание обработчиков событий в цикле</title>
+</head>
+<body>
+
+             <!-- Отвязывание обработчиков событий в цикле -->
+
+
+             <!-- ЗАДАЧА №1 -->
+
+             <p>text</p>
+             <p>textura</p>
+             <p>mario</p>
+    <script>
+
+
+
+
+
+
+            // Отвязывание обработчиков событий в цикле
+
+
+            // ЗАДАЧА №1
+
+// Даны абзацы. По нажатию на любой из абзацев добавьте ему в конец восклицательный
+//  знак. Сделайте так, чтобы это добавление происходило лишь по первому нажатию.
+
+let paragrah = document.querySelectorAll('p');
+
+for (let paragrahs of paragrah) {
+    paragrahs.addEventListener('click', click);
+    function click () {
+        paragrahs.innerHTML +=  ' !'
+        this.removeEventListener('click', click);
+    }
+        
+}
+    </script>
+</body>
+</html>
