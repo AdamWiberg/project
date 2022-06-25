@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Получение группы элементов</title>
+</head>
+<body>
+
+
+                   <!-- ЗАДАЧА №1 -->
+
+<p id = 'paragrah'>Пример!</p>
+<p id = 'paragrah'>Пример 2</p>
+<p id = 'paragrah'>Пример 3</p>
+<p id = 'paragrah'>Пример 4</p>
+<p id = 'paragrah'>Пример 5</p>
+
+<input type="submit" id = 'button'>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+
+<p id = 'paragrah'>Text #</p>
+<p id = 'paragrah'>Text #</p>
+<p id = 'paragrah'>Text #</p>
+
+<input type="submit" id = 'button'>
+
+
+<!-- 
+------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- ЗАДАЧА №3 -->
+
+
+<input value="4" id = 'inputs'>
+<input value="7" id = 'inputs'>
+<input value="2" id = 'inputs'>
+
+<input type="submit" id = 'button'>
+
+<p id = 'paragrah'>Абзац</p>
+
+    <script>
+
+                   //   Получение группы элементов
+                
+                
+                   //    ЗАДАЧА №1
+    
+// Даны абзацы и кнопка. По нажатию на кнопку найдите все абзацы, переберите из циклом
+//  и установите текст каждого абзаца в значение 'text'.
+
+
+let paragrah = document.querySelectorAll('#paragrah');
+
+let button = document.querySelector('#button')
+
+button.addEventListener('click', function() {
+    for (let elem of paragrah) {
+    elem.innerHTML += ' text'
+}
+
+})
+
+
+
+// -----------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №2
+
+
+// Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого
+// абзаца его порядковый номер.
+
+
+let paragrah = document.querySelectorAll('#paragrah');
+let button = document.querySelector('#button')
+
+
+button.addEventListener('click', function() {
+    for (let i = 0; i < paragrah.length; i++) {
+        let elem = paragrah[i]
+
+        elem.innerHTML += ' ' + (i + 1)
+    }
+})
+
+
+
+
+// ЗАДАЧА №3
+
+
+// ---------------------------------------------------------------------------------------
+
+
+// Даны инпуты с числами, абзац и кнопка. 
+// По нажатию на кнопку найдите сумму чисел из инпутов и запишите эту сумму в текст абзаца.
+
+let inputs = document.querySelectorAll('#inputs');
+let button = document.querySelector('#button');
+let paragrah = document.querySelector('#paragrah');
+
+
+
+button.addEventListener('click', function () {
+    let sum = 0;
+    for (let input of inputs) {
+        sum += parseInt(input.value)
+
+        paragrah.innerHTML = 'Сумма чисел инпутов равна: ' + sum
+    }
+})
+
+    </script>
+
+
+
+
+</body>
+</html>
