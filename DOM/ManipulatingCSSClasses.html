@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Манипулирование CSS классами в JavaScript
+        Массив классов</title>
+</head>
+<body>
+    <!-- Манипулирование CSS классами в JavaScript. Массив классов -->
+
+    <!-- ЗАДАЧА №1 -->
+
+    <!-- Узнайте количество его классов. -->
+
+    <p id="elem" class="www ggg zzz"></p>
+
+
+<!-- --------------------------------------------------------------------------------- -->
+
+    <!-- ЗАДАЧА №2 -->
+
+    <!-- Переберите в цикле его классы. -->
+    <p id="elem" class="www ggg zzz"></p>
+
+
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №3 -->
+<!-- Добавьте ему класс xxx. -->
+
+<p id="elem" class="www ggg zzz"></p>
+
+    
+    
+   
+<!-- --------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №4 -->
+
+<!-- Удалите у него класс www и класс zzz. -->
+<p id="elem" class="www ggg zzz"></p>
+
+
+
+
+
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
+<!-- ЗАДАЧА №5 -->
+
+<!-- Проверьте наличие у него класса ggg. -->
+<p id="elem" class="www ggg zzz"></p>
+
+
+
+
+
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
+
+<!-- ЗАДАЧА №6 -->
+
+<!-- Дан элемент. Добавьте ему класс www, если его нет и удалите - если есть. -->
+
+<p id="elem" class="www ggg zzz"></p>
+
+
+    <script>
+
+                   // Манипулирование CSS классами в JavaScript
+                       //         Массив классов
+
+
+// ЗАДАЧА №1
+
+let paragrah = document.querySelector('#elem');
+
+let length = paragrah.classList.length
+
+console.log(length)
+
+
+// -----------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №2
+
+let paragrah = document.querySelector('#elem');
+
+let length = paragrah.classList;
+
+for (let className of length ) {
+    document.write(className + '<br>')
+}
+
+
+// -----------------------------------------------------------------------------------
+
+
+
+
+// Добавление классов || ClassList.add
+
+// ЗАДАЧА №3
+
+let paragrah = document.querySelector('#elem');
+
+paragrah.classList.add('xxx')
+
+console.log(paragrah)
+
+
+
+// -----------------------------------------------------------------------------------
+
+
+
+
+
+// Удаление классов || classList.remove
+
+// ЗАДАЧА №4
+
+let paragrah = document.querySelector('#elem');
+
+paragrah.classList.remove('zzz')
+console.log(paragrah)
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------
+
+
+// Проверка классов || classList.contains
+
+// ЗАДАЧА №5
+
+let paragrah = document.querySelector('#elem');
+
+let contains = paragrah.classList.contains('gwgg')
+console.log(contains)
+
+
+
+
+// -----------------------------------------------------------------------------------
+
+// Чередование классов || classList.toggle
+
+// ЗАДАЧА №6
+
+let paragrah = document.querySelector('#elem');
+
+paragrah.classList.toggle('zzdz')
+console.log(paragrah)
+
+    </script>
+
+</body>
+</html>
