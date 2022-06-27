@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизация элементов через атрибут style в JavaScript
+    </title>
+</head>
+<body>
+                    <!-- Стилизация элементов через атрибут style в JavaScript-->
+
+
+    <div id ='block'>text</div>
+
+   <ul>
+       <li>234</li>
+       <li>456</li>
+       <li>678</li>
+   </ul>
+    <input type = 'submit' id ='button'>
+
+    <script>
+
+                       // Стилизация элементов через атрибут style в JavaScript
+
+// ЗАДАЧА №1
+
+// Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу.
+
+
+let div = document.querySelector('#block');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    div.style.width = '100px'
+    div.style.height = '40px';
+    div.style.border = '55px'
+
+    console.log(  div.style.border)
+})
+
+
+
+// ----------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №2
+
+// Дан див с текстом и кнопка. По клику на кнопку установите диву размер шрифта в 20px,
+//  а также верхнюю границу и фон.
+
+let block = document.querySelector('#block');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    block.style.fontSize = '20px'
+    block.style.background = "#f2eee3";
+    block.style.borderTopStyle = 'double';
+})
+
+
+
+// -------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №3
+
+// Дан список ul и кнопка. По клику на кнопку добавьте тегам li свойство float в значении left.
+
+let ul = document.querySelector('li');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    ul.style.cssFloat = 'left'
+})
+    </script>
+
+
+
+</body>
+</html>
