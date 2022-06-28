@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стилизация с помощью CSS классов на JavaScript
+    </title>
+</head>
+
+<style>
+
+  .crossOut {
+       text-decoration: line-through;
+   }
+
+   .bold {
+    font-weight: bold;
+   }
+
+   .colored {
+       color:red
+   }
+</style>
+<body>
+              <!-- Стилизация с помощью CSS классов на JavaScript-->
+<p>Text</p>
+<input type="submit" id = 'button1'>
+<input type="submit" id = 'button2'>
+<input type="submit" id = 'button3'>
+
+    <script>
+                   // Стилизация с помощью CSS классов на JavaScript
+
+// ЗАДАЧА №1
+
+// Дан абзац. Даны кнопки 'перечеркнуть', 'сделать жирным', 'сделать красным'.
+//  Пусть по нажатию на каждую кнопку заданное действие происходит с абзацем 
+//  (становится красным, например).
+
+let paragrah = document.querySelector('p');
+let button1 = document.querySelector('#button1');
+let button2 = document.querySelector('#button2');
+let button3 = document.querySelector('#button3');
+
+button1.addEventListener('click', function() {
+    paragrah.classList.add('crossOut')
+})
+
+button2.addEventListener('click', function() {
+    paragrah.classList.toggle('bold')
+})
+
+button3.addEventListener('click', function() {
+    paragrah.classList.add('colored')
+})
+
+
+    </script>
+
+
+
+</body>
+</html>
