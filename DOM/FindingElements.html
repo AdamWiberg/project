@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нахождение элементов по родственным связям</title>
+</head>
+<body>
+
+    <style>
+        .colored {
+            color: red
+        }
+    </style>
+              <!-- Нахождение элементов по родственным связям -->
+
+
+<!-- Найдите первого потомка этого элемента и сделайте его текст красного цвета. -->
+<!-- Найдите всех потомков этого элемента и добавьте им в конец текст '!'. -->
+
+
+<ul id="elem">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+	<li>4</li>
+	<li>5</li>
+</ul>
+
+
+
+
+<!-- ------------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №4 -->
+<!-- Найдите его родителя и задайте ему красную границу. -->
+
+
+<div>
+	<ul>
+		<li>text</li>
+		<li>text</li>
+		<li id="elem">text</li>
+		<li>text</li>
+		<li>text</li>
+	</ul>
+</div>
+
+<!-- ------------------------------------------------------------------------ -->
+
+
+<!-- ЗАДАЧА №5 -->
+<!-- Найдите его родителя его родителя и задайте ему красную границу. -->
+
+
+<div>
+	<ul>
+		<li>text</li>
+		<li>text</li>
+		<li id="elem">text</li>
+		<li>text</li>
+		<li>text</li>
+	</ul>
+</div>
+
+
+
+<!-- --------------------------------------------------------------- -->
+
+
+<!-- Поиск всех родителей -->
+
+
+
+<!-- ЗАДАЧА №6 -->
+
+<!-- Найдите ближайшего родителя этого элемента, являющегося тегом div. -->
+
+
+<header>
+	<div>
+		<p>
+			<span id="elem"></span>
+		</p>
+	</div>
+</header>
+
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №7 -->
+<!-- Найдите ближайшего родителя этого элемента, являющегося элементом с классом www. -->
+
+
+<header>
+	<div class="www">
+		<p class="www">
+			<span id="elem"></span>
+		</p>
+	</div>
+</header>
+
+
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!--  ПОИСК СОСЕДЕЙ -->
+
+
+<!-- ЗАДАЧА №8 -->
+<!-- Найдите его соседа сверху и добавьте ему в конец текст '!'. -->
+
+
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li id="elem">3</li>
+	<li>4</li>
+	<li>5</li>
+</ul>
+
+
+
+
+<!-- ------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №10 -->
+
+<ul>
+	<li>text</li>
+	<li>text</li>
+	<li id="elem">text</li>
+	<li>text</li>
+	<li>text</li>
+</ul>
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+<!-- ЗАДАЧА №11 -->
+<!-- Поменяйте местами текст его соседа сверху и текст его соседа снизу. -->
+<ul>
+	<li>text1</li>
+	<li>text2</li>
+	<li id="elem">text3</li>
+	<li>text4</li>
+	<li>text5</li>
+</ul>
+
+    <script>
+                     // Нахождение элементов по родственным связям
+
+// ЗАДАЧА №1
+
+let list = document.querySelector('#elem');
+
+// let text = list.firstElementChild
+let text = list.children
+let li = document.querySelectorAll('li')
+
+for (let elems of text) {
+    elems.innerHTML += '!'
+}
+
+
+
+
+// ----------------------------------------------------------------------
+
+// ЗАДАЧА №4
+
+let elem = document.querySelector('#elem');
+
+let id = elem.parentNode
+
+id.style.border  = '2px double blue'
+
+
+// ---------------------------------------------------------------------------
+
+// ЗАДАЧА №5
+
+let elem = document.querySelector('#elem');
+
+let parent1 = elem.parentNode;
+
+let parent2 = parent1.parentNode;
+
+console.log(parent2)
+parent2.style.border = '2px double red'
+
+
+
+// ----------------------------------------------------------------------
+
+
+ // Поиск всех родителей
+
+//  ЗАДАЧА №6
+
+let elem = document.querySelector('#elem');
+
+let parent = elem.closest('div')
+
+
+console.log(parent)
+
+
+
+
+// --------------------------------------------------------------------
+
+
+// ЗАДАЧА №7
+let elem = document.querySelector('#elem');
+
+let parent = elem.closest('.www')
+console.log(parent)
+
+
+
+
+
+// --------------------------------------------------------------------
+
+
+// ПОИСК СОСЕДЕЙ
+
+// ЗАДАЧА №8
+
+let elem = document.querySelector('#elem');
+
+let topElement = elem.previousElementSibling.innerHTML;
+
+
+// //Элемент сосед снизу
+// // Найдите его соседа снизу и добавьте ему в конец текст '!'.
+
+let BottomElement = elem.nextElementSibling.innerHTML += '!'
+console.log(BottomElement)
+
+
+
+
+// --------------------------------------------------------------------------
+
+// ЗАДАЧА №10
+
+// Найдите его соседа снизу его соседа снизу 
+// (следующий элемент за соседним) и добавьте ему в конец текст '!'.
+
+
+let elem = document.querySelector('#elem');
+
+let topElement1 = elem.nextElementSibling
+let topElement2 = topElement1.nextElementSibling.innerHTML += '!'
+
+
+
+// -----------------------------------------------------------------------------
+
+// ЗАДАЧА №11
+// Поменяйте местами текст его соседа сверху и текст его соседа снизу.
+
+
+let elem = document.querySelector('#elem');
+
+let topElement = elem.previousElementSibling.innerHTML = 'Текст поменян №2';
+
+let BottomElement = elem.nextElementSibling.innerHTML = 'Текст поменян №4'
+     </script>
+
+
+
+</body>
+</html>
