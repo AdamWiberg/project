@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Другие полезные методы для поиска элементов</title>
+</head>
+<body>
+    <!-- Другие полезные методы для поиска элементов-->
+
+<!-- ЗАДАЧА №1 -->
+
+
+<div id="elem"></div>
+
+
+
+<!-- ------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №2 -->
+<!-- Получите все теги li по имени тега и сделайте их текст красного цвета. -->
+
+
+
+<ul>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+	<li>text</li>
+</ul>
+
+
+
+
+<!-- -------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №3 -->
+
+<!-- Получите эти элементы по имени класса и сделайте их текст красного цвета. -->
+
+
+<p class="www">elem 1</p>
+<p class="www">elem 2</p>
+<p class="www">elem 3</p>
+
+
+
+
+<script>
+
+// Другие полезные методы для поиска элементов
+
+// ЗАДАЧА №1
+
+// Получите этот элемент с помощью метода getElementById 
+// и установите ему какой-нибудь текст.
+
+
+
+let block = document.getElementById('elem');
+
+block.innerHTML = 'Текстовый редактор!'
+
+
+
+// -------------------------------------------------------------------------
+
+// Получение по имени тега
+
+
+// ЗАДАЧА №2
+
+let list = document.getElementsByTagName('li')
+
+for (let lists of list) {
+    lists.style.color = 'red'
+}
+
+
+
+
+// -----------------------------------------------------------------
+
+// Получение по имени класса
+
+
+// ЗАДАЧА №3
+
+let list = document.getElementsByClassName('www');
+
+for (let lists of list) {
+  lists.style.color = 'red'
+}
+</script>
+
+
+</body>
+</html>
