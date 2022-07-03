@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользовательские атрибуты в JavaScript
+    </title>
+</head>
+<body>
+    <!-- Пользовательские атрибуты в JavaScript-->
+
+<!-- ЗАДАЧА №1 -->
+
+<!-- Сделайте так, чтобы по клику на див в конец его текста 
+добавилось содержимое его атрибута data-text. -->
+
+<div id="elem" data-text="str">text</div>
+
+
+
+
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- ЗАДАЧА №2 -->
+
+ <!-- Даны дивы, содержащие в атрибуте data-num свой порядковый номер: -->
+ <!-- Сделайте так, чтобы по клику на любой из дивов ему 
+в конец записывался его порядковый номер. -->
+
+
+ <div data-num="1">text</div>
+<div data-num="2">text</div>
+<div data-num="3">text</div>
+<div data-num="4">text</div>
+<div data-num="5">text</div>
+
+
+
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- ЗАДАЧА №3 -->
+
+<input type = "submit" id = 'button' value = '1'>
+
+<div data-num = ''></div>
+
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №4 -->
+<input id="elem" data-length="5" value = ''>
+
+
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №5 -->
+<input id="elem" data-min = "5" data-max = "10" value = '4'>
+
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №6 -->
+<!-- Имена с дефисами -->
+
+
+<!-- Сделайте так, чтобы по клику на див в конец его текста добавлялась 
+стоимость покупки, равная цене, умноженной на количество. -->
+
+<div id="elem" data-product-price="1000" data-product-amount="5">
+	товар яблоки
+</div>
+
+
+
+<!-- ------------------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №7 -->
+<!-- Обращение через методы -->
+<!-- Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num 
+запишите порядковый номер этого абзаца. Используйте метод setAttribute. -->
+<p >Text 1</p>
+<p >Text 2</p>
+<p >Text 3</p>
+<p> Text4</p>
+
+
+
+
+
+
+    <script>
+
+
+
+// Пользовательские атрибуты в JavaScript
+
+ЗАДАЧА №1 
+
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('click', function() {
+    elem.innerHTML = elem.innerHTML + ' ' + elem.dataset.text
+})
+
+
+
+// -------------------------------------------------------------------
+
+// ЗАДАЧА №2
+
+let block = document.getElementsByTagName('div')
+
+for (let blocks of block) {
+    blocks.addEventListener('click', function() {
+    blocks.innerHTML += ' ' + blocks.dataset.num
+})
+
+}
+
+
+
+
+// ----------------------------------------------------------------------
+
+// ЗАДАЧА №3
+
+// Дана кнопка. Сделайте так, чтобы эта кнопка считала количество кликов по ней, 
+// записывая их в какой-нибудь пользовательский атрибут. 
+// Пусть по двойному клику на эту кнопку на экран выводится, 
+// сколько кликов по этой кнопке было сделано.
+
+
+let button = document.querySelector('#button');
+let block = document.getElementsByTagName('div');
+
+
+let value = 0;
+
+for (let blocks of block) {
+button.addEventListener('click', function() {
+  let sum = button.value++
+
+sum.innerHTML = block.dataset.num
+
+console.log(sum)
+})
+
+}
+
+button.addEventListener('dblclick', function() {
+   
+})
+
+
+
+
+
+// -------------------------------------------------------------------------------------
+
+// ЗАДАЧА №4
+
+// В этом инпуте в атрибуте data-length содержится количество символов, 
+// которое нужно ввести в инпут. Сделайте так, чтобы по потери фокуса, 
+// если количество введенных символов не совпадает с заданным, выводилось сообщение об этом.
+
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('blur', function () {
+    let correstLength = this.dataset.length;
+    let inputDataLength = this.value.length;
+
+    if (correstLength <= inputDataLength) {
+        console.log('Число символов совпадает')
+    } else {
+        console.log('Число символов не совпадает')
+    }
+}) 
+
+
+
+
+
+// -------------------------------------------------------------------------------------
+// ЗАДАЧА №5
+
+// В этом инпуте атрибуты data-min и data-max содержат диапазон.
+//  Сделайте так, чтобы по потери фокуса, если количество введенных 
+//  символов не попадает в этот диапазон, выводилось сообщение об этом.
+
+let elem = document.querySelector('#elem');
+
+
+elem.addEventListener('blur', function() {
+ let dataMin = this.dataset.min 
+ let dataMax = this.dataset.max 
+ let length = this.value.length
+
+if (dataMin == length) {
+    // console.log('Число ' + dataMin)
+} else if (dataMax == length) {
+    // console.log('Число ' + dataMax)
+} else {
+    console.log('Число вне диапозона')
+}
+})
+
+
+
+
+// -------------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №6
+// Имена с дефисами
+
+// Сделайте так, чтобы по клику на див в конец его 
+// текста добавлялась стоимость покупки, равная цене, умноженной на количество.
+
+let block = document.querySelector('#elem');
+
+block.addEventListener('click', function() {
+    let sum = block.dataset.productPrice * block.dataset.productAmount
+    block.innerHTML = block.innerHTML + ': ' + 'за ' + sum + ' рублей'
+})
+
+
+
+
+
+// -------------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №7
+// Обращение через методы
+
+// Даны абзацы. Переберите их циклом и каждому абзацу в атрибут data-num 
+// запишите порядковый номер этого абзаца. Используйте метод setAttribute.
+
+let paragrah = document.getElementsByTagName('p');
+
+ 
+for (let i = 0; i < paragrah.length; i++) {
+   
+paragrah[i].setAttribute('data-num', i);
+console.log(paragrah[i])
+}
+
+</script>
+
+</body>
+</html>
