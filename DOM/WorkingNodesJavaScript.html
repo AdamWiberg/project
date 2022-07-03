@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с узлами в JavaScript</title>
+</head>
+<body>
+             <!-- Работа с узлами в JavaScript -->
+
+             <!-- ЗАДАЧА №1 -->
+<!-- Напишите код, который покажет разницу между lastChild и lastElementChild. -->
+
+<div id = 'parent'>
+    <p>1</p>
+    <p>2</p>
+</div>
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №2 -->
+<!-- Напишите код, который покажет разницу между nextSibling и nextElementSibling. -->
+
+<p id = 'parent'>Text #1</p>
+<p id = 'parent'>Text #2</p>
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №3 -->
+<!-- Напишите код, который покажет разницу между previousSibling и previousElementSibling. -->
+
+<p >Text1</p>
+<p id="parent">Text2</p>
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №4 -->
+<!-- Переберите циклом все узлы этого дива и выведите их в консоль. -->
+
+<div id="elem">txt<b>tag</b>comtxt<b>tag</b>com</div>
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №5 -->
+<!-- НАЗВАНИЕ УЗЛОВ -->
+
+<!-- Переберите циклом все узлы этого дива и выведите в консоль их названия.-->
+<!-- <div id="elem">txt<b>tag</b>comtxt<b>tag</b><com -->
+<!-- </div>  --> 
+
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №6 -->
+<!-- ТИП УЗЛОВ -->
+<!-- Переберите циклом все узлы этого дива и выведите в консоль только узлы-элементы и текстовые узлы.
+ -->
+<div id="elem">txt<b>tag</b>comtxt<b>tag</b>com 
+ </div>  
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------- -->
+<!-- ЗАДАЧА №7 -->
+
+<!-- ТЕКСТ УЗЛОВ  -->
+
+<!-- Переберите циклом все узлы этого дива и выведите в консоль тексты всех узлов. -->
+<div id="elem">txt<b>tag</b><!--com-->txt<b>tag</b><!--com-->
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+
+              // Работа с узлами в JavaScript
+
+// ЗАДАЧА №1
+//  Напишите код, который покажет разницу между lastChild и lastElementChild.
+
+
+let block = document.querySelector('#parent');
+
+console.log(block.lastElementChild); // дочерний последний элемент тег <p>2</p>
+console.log(block.lastChild); // #text
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №2
+// Напишите код, который покажет разницу между nextSibling и nextElementSibling.
+
+let paragrah = document.querySelector('#parent');
+
+console.log(paragrah.nextElementSibling)
+console.log(paragrah.nextSibling)
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №3
+// Напишите код, который покажет разницу между previousSibling и previousElementSibling.
+
+let paragrah = document.querySelector('#parent');
+
+// console.log(paragrah.previousElementSibling)
+console.log(paragrah.previousSibling)
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №4
+// Переберите циклом все узлы этого дива и выведите их в консоль.
+
+let elem = document.querySelector('#elem');
+
+for (let elems of elem.childNodes) {
+    console.log(elems)
+}
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №5
+
+// НАЗВАНИЕ УЗЛОВ
+// Переберите циклом все узлы этого дива и выведите в консоль их названия.
+
+let elem = document.querySelector('#elem');
+
+for (let elems of elem.nodeName) {
+    console.log(elems)
+}
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №6
+// ТИП УЗЛОВ
+// Переберите циклом все узлы этого дива и выведите в консоль только узлы-элементы и текстовые узлы.
+
+let elem = document.querySelector('#elem');
+
+let elems = elem.childNodes
+
+for (let i = 0; i < elems.length; i++) {
+  let node =  elems[i].nodeType;
+//   console.log(node)
+  if (node == '1') {
+      console.log('Количество узлов элементом = ' + node)
+  } else if (node == '3') {
+      console.log('Количество текстовых узлов = ' + node)
+  }
+}
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №7
+
+// ТЕКСТ УЗЛОВ 
+// Переберите циклом все узлы этого дива и выведите в консоль тексты всех узлов.
+
+
+
+let elem = document.querySelector('#elem').textContent;
+
+
+console.log(elem)
+
+
+
+// Переберите циклом все узлы этого дива и выведите в консоль 
+// тексты всех комментариев и текстовых узлов.
+
+let elem = document.querySelector('#elem')
+
+let elems = elem.childNodes
+
+for (let i = 0; i < elems.length; i++) {
+  let node = elems[i]
+  let node1 = node.textContent
+  console.log(node1)
+}
+</script>
+</body>
+</html>
