@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Советы по написанию кода на примере DOM в JavaScript</title>
+</head>
+<body>
+    <!-- Советы по написанию кода на примере DOM в JavaScript -->
+
+<!-- ЗАДАЧА №1 -->
+
+<!-- Получите года, сумма цифр которых равна 6. Найдите сумму полученных годов. -->
+
+
+<ul>
+	<li>2000</li>
+	<li>2004</li>
+	<li>2021</li>
+	<li>2022</li>
+	<li>2025</li>
+	<li>2031</li>
+</ul>
+
+
+
+    <script>
+
+
+// Советы по написанию кода на примере DOM в JavaScript
+
+// ЗАДАЧА №1
+
+let list = document.querySelectorAll('li')
+var sum = 0;
+
+for (let lists of list) {
+    let text = +lists.textContent;
+
+
+//  console.log(text)
+
+     let text1 = text.toString().split(' ').join('')
+ sum += Number(text1)
+ 
+   for (let text2 of text1) {
+       console.log(sum += Number(text2))
+   }
+ lists.innerHTML += Number(sum)
+   
+}
+
+    </script>
+
+</body>
+</html>
