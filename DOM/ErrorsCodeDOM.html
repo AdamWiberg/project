@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск ошибок в коде с DOM в JavaScript</title>
+</head>
+<body>
+
+                  <!-- Поиск ошибок в коде с DOM в JavaScript -->
+
+<!-- ЗАДАЧА №1 -->
+
+<!-- Код должен добавить текст в конец каждого абзаца: -->
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+
+
+
+
+ <!-- ------------------------------------------------------------------------------ -->
+
+
+ <!-- ЗАДАЧА №2 -->
+
+ <!-- По клику на абзац его значение должно увеличиться на единицу: -->
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+
+
+
+
+ <!-- ------------------------------------------------------------------------------ -->
+
+
+ <!-- ЗАДАЧА №3 -->
+
+ <!-- По клику на кнопку текст абзаца должен стать жирным: -->
+
+<p>text</p>
+<button>click</button>
+
+
+
+
+
+ <!-- ------------------------------------------------------------------------------ -->
+
+
+
+
+
+<!-- ЗАДАЧА №4 -->
+
+<!-- По клику на кнопку должна вывестись сумма чисел из абзацев: -->
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+
+<button>click</button>
+
+
+
+
+
+ <!-- ------------------------------------------------------------------------------ -->
+
+
+
+
+
+<!-- ЗАДАЧА №5 -->
+
+<!-- По клику на абзац ему в конец должен добавиться заданный текст: -->
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+
+
+
+
+
+<!-- ЗАДАЧА №6 -->
+
+<!-- По клику на кнопку текст каждого абзаца должен стать жирным: -->
+
+<p>text1</p>
+<p>text2</p>
+<p>text3</p>
+<button>click</button>
+
+
+
+
+
+
+ <!-- ------------------------------------------------------------------------------ -->
+
+
+ <!-- ЗАДАЧА №7 -->
+
+ <!-- По клику на кнопку в консоль должна вывестись сумма чисел из абзацев: -->
+
+ <p>1</p>
+<p>2</p>
+<p>3</p>
+
+<button>click</button>
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №8 -->
+
+<!-- В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма чисел из инпутов: -->
+
+<input value="1">
+<input value="2">
+<input value="3">
+
+<button>click</button>
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №9 -->
+
+
+<!-- В первые два инпута вводятся числа. По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
+
+<input id="inp1" value="2">
+<input id="inp2" value="2">
+<input id="inp3" value="3">
+
+<button id="btn">click</button>
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+
+
+<!-- ЗАДАЧА №10 -->
+
+<!-- В первые два инпута вводятся числа. 
+По клику на кнопку в абзац должна вывестись сумма этих чисел: -->
+
+<input id="inp1">
+<input id="inp2">
+<p id="res">Тут ответ</p>
+
+<button id="btn">click</button>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №11 -->
+
+
+<!-- По клику на кнопку нужно проверить, что текст в каждом инпуте
+ совпадает с текстом его data атрибута: -->
+
+<input data-text="2">
+<input data-text="2">
+<input data-text="2">
+
+<button id="btn">click</button>
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+
+<!-- ЗАДАЧА №12 -->
+
+<!-- По клику на кнопку нужно проверить, 
+что текст в каждом инпуте совпадает с текстом соответствующего элемента массива: -->
+
+<input>
+<input>
+<input>
+
+<button id="btn">click</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №13 -->
+
+
+<!-- В инпуты вводятся числа. По клику на кнопку в консоль должна вывестись сумма введенных чисел: -->
+
+<input>
+<input>
+<input>
+
+<button id="btn">click</button>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+<!-- ЗАДАЧА №14 -->
+
+
+<!-- В первые два инпута вводятся числа.
+ По клику на кнопку в третий инпут должна вывестись сумма этих чисел: -->
+
+<input id="inp1">
+<input id="inp2">
+<input id="inp3">
+
+<button id="btn">click</button>
+
+
+
+
+
+
+<!-- ---------------------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №15 -->
+
+
+<!-- В инпут вводится число. По потери фокуса 
+в консоль должна вывестись сумма цифр этого числа: -->
+
+
+<input id="inp">
+
+
+
+
+
+
+    <script>
+ 
+                  //   Поиск ошибок в коде с DOM в JavaScript
+// ЗАДАЧА №1
+
+let elems = document.getElementsByTagName('p');
+for (let elem of elems) {
+    elem.textContent += '!';
+console.log(elem)
+}
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №2
+
+let elems = document.getElementsByTagName('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function() {
+		this.textContent++
+        
+	});
+}
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №3
+
+let button = document.querySelector('button');
+let elem   = document.querySelector('p');
+
+button.addEventListener('click', function() {
+	 elem.style.fontWeight = 'bold'
+   
+});
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №4
+
+let button = document.querySelector('button');
+let elems  = document.querySelectorAll('p');
+
+button.addEventListener('click', function() {
+	let sum = 0;
+	
+	for (let elem of elems) {
+		sum += Number(elem.textContent);
+
+       
+	}
+    console.log(sum);
+
+});
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №5
+
+let elems = document.querySelectorAll('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function () {
+		this.innerHTML += '!';
+	});
+}
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №6
+
+
+let button = document.querySelector('button');
+let elems  = document.querySelectorAll('p');
+
+button.addEventListener('click', function() {
+	for (let elem of elems) {
+		elem.style.fontWeight += 'bold';
+	}
+});
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------
+
+ЗАДАЧА №7
+
+let button = document.querySelector('button');
+let elems  = document.querySelectorAll('p');
+let sum = 0;
+
+for (let elem of elems) {
+	sum += Number(elem.textContent);
+    console.log(elem.textContent)
+	
+	button.addEventListener('click', function() {
+		console.log(sum);
+	});
+    // console.log(sum);
+}
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №8
+
+let button = document.querySelector('button');
+let elems  = document.querySelectorAll('input');
+let sum = 0;
+
+for (let elem of elems) {
+   sum += Number(elem.value)
+}
+
+button.addEventListener('click', function() {
+	console.log(sum);
+});
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №9 
+
+let btn  = document.querySelector('#btn');
+let inp1 = document.querySelector('#inp1');
+let inp2 = document.querySelector('#inp2');
+let inp3 = document.querySelector('#inp3');
+let sum = 0
+
+btn.addEventListener('click', function() {
+	inp3.textContent = inp1.textContent + inp2.textContent;
+   sum = Number(inp1.value) + Number(inp2.value)
+   inp3.value = sum
+});
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+// ЗАДАЧА №10
+
+let btn  = document.querySelector('#btn');
+let res  = document.querySelector('#res');
+let inp1 = document.querySelector('#inp1');
+let inp2 = document.querySelector('#inp2');
+
+btn.addEventListener('click', function() {
+	res.innerHTML = Number(inp1.value) + Number(inp2.value);
+});
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №11 
+
+let inputs = document.querySelectorAll('input')
+let button = document.querySelector('#btn')
+
+button.addEventListener('click', function() {
+	for (let input of inputs) {
+		if (input.value === input.dataset.text) {
+			console.log('совпадает')
+		} else {
+			console.log('не совпадает')
+		}
+        // console.log(input)
+     
+	}
+});
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+// ЗАДАЧА №12
+
+let inputs = document.querySelectorAll('input')
+let button = document.querySelector('#btn')
+
+let texts = [
+	'1',
+	'1',
+	'1',
+];
+
+button.addEventListener('click', function() {
+	for (let input of inputs) { // 3 инпута
+		for (let text of texts) {
+            
+			if (input.value === text[0]){
+				console.log('совпадает')
+                break;
+			} else if (input.value === text[1]) {
+				console.log('совпадает')
+                break;
+			} else if (input.value === text[2]) {
+                console.log('совпадает')
+                break;
+            } else {
+                console.log('не совпадает')
+                break;
+            }
+		}
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ЗАДАЧА №13
+
+
+let inputs = document.querySelectorAll('input');
+let btn = document.querySelector('#btn');
+let sum = 0;
+
+btn.addEventListener('click', function() {
+	for (let input of inputs) {
+		sum += Number(input.value);
+	}
+	
+	console.log(sum);
+});
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №14
+
+
+let btn  = document.querySelector('#btn');
+let inp1 = document.querySelector('#inp1');
+let inp2 = document.querySelector('#inp2');
+let inp3 = document.querySelector('#inp3');
+
+
+
+
+btn.addEventListener('click', function() {
+	inp3.value = Number(inp1.value) + Number(inp2.value);
+ 
+});
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №15
+
+let inp = document.querySelector('#inp');
+
+inp.addEventListener('blur', function() {
+	 let digits = inp.value.split('');
+	let sum = 0;
+	
+	for (let digit of digits) {
+		sum += Number(digit);
+	}
+	
+	console.log(sum);
+});
+
+
+
+    </script>
+    
+</body>
+</html>
