@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отработка изученного материала на работу с DOM</title>
+</head>
+<body>
+ <!-- Отработка изученного материала на работу с DOM-->
+
+
+ <!-- ЗАДАЧА №1 -->
+
+ <!-- Дан инпут и абзац. 
+По потери фокуса в инпуте запишите значение инпута в конец текста абзаца. -->
+
+
+<input value="1">
+<p>text</p>
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №2 -->
+
+<!-- Дано несколько инпутов, абзац и кнопка. По нажатию на кнопку получите числа, 
+стоящие в этих инпутах и запишите их сумму в абзац. -->
+
+
+<input value="">
+<input value="">
+<input value="">
+
+<p>Сумма инпутов равна: </p>
+<button>Кнопка</button>
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+<!-- ЗАДАЧА №3 -->
+
+<!-- Дан инпут. В него вводится число. 
+По потери фокуса найдите сумму цифр этого числа. -->
+
+
+<input value = "20">
+<p>Ответ:</p>
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+<!-- ЗАДАЧА №4 -->
+
+
+<!-- Дан инпут. В него вводятся числа через запятую. 
+По потери фокуса найдите среднее арифметическое этих чисел 
+(сумма делить на количество). -->
+
+
+<input value = "">
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №5 -->
+
+
+<!-- Даны 4 инпута. В первый инпут вводится ФИО через пробел.
+ По потери фокуса запишите фамилию, имя и отчество в остальные 3 инпута. -->
+
+ <input value="Ф И О" id = 'input' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+ <input value="Ф" id = 'input1'>
+ <input value="И" id = 'input2'>
+ <input value="О" id = 'input3'>
+
+
+
+
+ <!-- ----------------------------------------------------------------------------- -->
+
+ <!-- ЗАДАЧА №6 -->
+
+ <!-- Дан инпут. В него вводится ФИО через пробел.
+  ФИО вводится с маленькой буквы. Сделайте так, чтобы по потери фокуса инпутом, 
+  введенные фамилия, имя и отчество автоматически стали записанными с
+   большой буквы (в этом же инпуте). -->
+
+   <input value="ф и о" >
+
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+    <!-- ЗАДАЧА №7 -->
+
+    <!-- Дан инпут. В него вводится текст. По потери фокуса узнайте количество слов в этом тексте. -->
+
+
+    <input value="text text text text text as asgdjasdas jksadhadjkas dbasjdhajk"> 
+     <p></p>
+
+
+
+
+
+
+
+
+        <!-- ----------------------------------------------------------------------------- -->
+
+        <!-- ЗАДАЧА №8 -->
+
+
+        <!-- Дан инпут. В него вводится дата в формате 31.12.2016. 
+        По потери фокуса в этом же инпуте поставьте эту дату в формате 2016-12-31. -->
+
+        <input value="31.12.2016"> 
+         <!-- 2016.12.31 -->
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+<!-- ЗАДАЧА №9 -->
+
+<!-- Дан инпут. В него вводится слово. По нажатию на кнопку проверьте то, 
+что это слово читается с начала и с конца одинаково (например, мадам). -->
+
+
+<input value="text">
+<input type = 'submit' id = 'button'>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+<!-- ЗАДАЧА №10 -->
+
+
+<!-- Дан инпут. В него вводится число. 
+Проверьте по потери фокуса, что это число содержит внутри себя цифру 3. -->
+
+
+
+<input value="1">
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+<!-- ЗАДАЧА №11 -->
+<!-- 
+Даны несколько абзацев и кнопка.
+ По нажатию на кнопку запишите в конец каждого абзаца его порядковый номер. -->
+
+
+<p>Номер №</p>
+<p> Номер №</p>
+<p>Номер №</p>
+
+
+<input type = 'submit' id = 'button'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+<!-- ЗАДАЧА №12 -->
+
+<!-- Даны ссылки. Добавьте в конец каждой ссылки ее href в круглых скобках. -->
+
+<a href = 'https://yandex'>vk</a><br>
+<a href = 'https://yandex'>google</a>
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<!-- ЗАДАЧА №13 -->
+<!-- Даны ссылки. 
+Если ссылка начинается с http://, то добавьте ей в конец стрелку → (делается так: &rarr;). -->
+
+
+<a href = 'http://www.ukr.net'> Сыллка 1</a><br>
+<a href = 'https://www.ukr.net'> Ссылка 2</a><br>
+<a href = 'http://wiki.ru'> Ссылка 3</a>
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<!-- ЗАДАЧА №14 -->
+
+<!-- Даны несколько абзацев с числами. 
+По нажатию на любой абзац запишите в него квадрат числа, которое в нем находится. -->
+
+<p>4</p>
+<p>5</p>
+<p>3</p>
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+<!-- ЗАДАЧА №15 -->
+
+<!-- 
+Дан инпут. В него вводится дата в формате 31.12.2016.
+ По потери фокуса узнайте день недели (словом), который приходится на эту дату. -->
+
+ <input value="31.12.2016"> 
+ <p>ДАТА:</p>
+
+
+
+
+
+
+
+
+
+
+ <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+ <!-- ЗАДАЧА №16 -->
+<!-- 
+ Дан инпут. Реализуйте кнопочки +1, -1, которые 
+ будут увеличивать или уменьшать на 1 значение инпута.
+  Сделайте так, чтобы это значение не могло стать меньше нуля. -->
+
+  <input value="1">
+ <button id = 'plus'>+1</button>
+ <button id = 'minus'>-1</button>
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+  <!-- ЗАДАЧА №17 -->
+
+  <!-- Дан инпут. Даны абзацы. 
+  Пусть в этот инпут записывается суммарное количество нажатий по этим абзацам. -->
+
+
+
+<input value="">
+<p>Щелчок</p>
+<p>Щелчок</p>
+<p>Щелчок</p>
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+  <!-- ЗАДАЧА №18 -->
+
+  <!-- На странице есть дивы. В них есть текст.  -->
+  <!-- Обойдите все дивы и обрежьте тот текст, который в них стоит так, 
+  чтобы он стал длиной 10 символов. И добавьте троеточие в конец обрезанного текста -->
+
+
+<div>ЗАРИПОВДАМИРИЛЬДАРОВИЧ</div>
+<div>ЗАРИПОВДАМИРИЛЬДАРОВИЧ</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+  <!-- ЗАДАЧА №19 -->
+
+  <!-- Дан инпут. В него вводится число. По потери фокуса проверьте, что в нем лежит число от 1 до 100. 
+  Если это так - покрасьте инпут в зеленый цвет, а если не так - в красный. -->
+
+
+  <input value="5">
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+<!-- ЗАДАЧА №20 -->
+
+<!-- 
+Дан инпут и кнопка. 
+По нажатию на кнопку сгенерируйте случайную строку из 8-ми символов и запишите в инпут. -->
+
+
+
+<input value="">
+<button>Кнопка</button>
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+<!-- ЗАДАЧА №21 -->
+
+
+
+
+
+<!-- Дан инпут и кнопка. Пользователь вводит в инпут какую-то строку. 
+По нажатию на кнопку перемешайте введенные символы случайным образом 
+и запишите ее обратно в инпут. -->
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+<!-- ЗАДАЧА №22 -->
+
+
+
+<!-- Дан инпут, кнопка и абзац. В инпут вводится температура в градусах Фаренгейта.
+ По клику на кнопку выведите в абзац температуру в градусах Цельсия. -->
+
+ <input placeholder="Введите температура в F" type = 'number'>
+
+ <button>Кнопка</button>
+ <p>Ответ</p>
+
+
+
+
+
+
+
+
+
+
+ <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+ <!-- ЗАДАЧА №23 -->
+
+
+ <!-- Дан инпут, кнопка и абзац.
+  В инпут вводится число. По нажатию на кнопку выведите в абзац факториал этого числа. -->
+
+
+  <input value="5">
+  <button>Кнопка</button>
+  <p>Ответ</p>
+
+
+
+
+
+
+
+   <!-- ----------------------------------------------------------------------------- -->
+
+
+
+
+ 
+    <script>
+
+
+
+
+
+
+            // Отработка изученного материала на работу с DOM
+
+// ЗАДАЧА №1
+
+let input = document.querySelector('input');
+let paragrah = document.querySelector('p')
+
+input.addEventListener('blur', function() {
+     paragrah.innerHTML =  paragrah.innerHTML + ' ' + input.value
+})
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №2
+
+let input = document.querySelectorAll('input');
+let paragrah = document.querySelector('p');
+let button = document.querySelector('button');
+
+
+button.addEventListener('click', func);
+let sum = 0
+    function func() {
+    for (let inputs of input) {
+    sum += Number(inputs.value)  
+    paragrah.innerHTML = sum  
+}
+button.removeEventListener('click', func);
+} 
+
+
+    
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+// ЗАДАЧА №3
+
+
+
+let input = document.querySelector('input');
+let paragrah = document.querySelector('p');
+
+input.addEventListener('blur', function() {
+    let str = input.value.split('');
+let sum = 0
+    for (let inputs of str) {
+        sum += Number(inputs)
+    }
+    paragrah.innerHTML = paragrah.innerHTML + ' ' + sum
+    console.log(sum)
+})
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+// ЗАДАЧА №4
+
+let input = document.querySelector('input');
+
+input.addEventListener('blur', function () {
+    let str = input.value.split(',');
+    let sum = 0;
+
+    for (let inputs of str) {
+        sum += Number(inputs)
+
+        console.log(sum / inputs)
+    }
+    // console.log(sum / inputs)
+})
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+// ЗАДАЧА №5
+
+
+let input = document.querySelector('#input');
+let input1 = document.querySelector('#input1');
+let input2 = document.querySelector('#input2');
+let input3 = document.querySelector('#input3');
+
+input.addEventListener('blur', function() {
+ let str = input.value.split(' ');
+ input1.value = str[0]
+ input2.value = str[1]
+ input3.value = str[2]
+
+})
+
+
+
+
+// -------------------------------------------------------------------------
+
+// ЗАДАЧА №6
+
+
+let input = document.querySelector('input');
+
+input.addEventListener('blur', function() {
+    let str = input.value.split(' ').map(n => n[0].toUpperCase() + n.slice(1)).join(' ');
+
+ input.value = str
+    
+   console.log(input)
+    
+   
+})
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №7
+
+
+let input = document.querySelector('input');
+let paragrah = document.querySelector('p');
+input.addEventListener('blur', function() {
+    let str = input.value.split(' ')
+   
+paragrah.innerHTML = 'Количество слов: ' + str.length
+})
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №8
+
+let input = document.querySelector('input');
+
+input.addEventListener('blur', function() {
+    let str = input.value.split('.')
+    str.reverse()
+    input.value = str.join('.')
+})
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №9
+
+let input = document.querySelector('input');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    let str = input.value.split('');
+    str.reverse()
+
+    let str1 = str.join('')
+    let str2 = input.value;
+
+    if (str1 == str2) {
+        console.log('Ваше слово одинаково и с конца');
+    } else {
+        console.log('Не одинаковое слово')
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №10
+
+let input = document.querySelector('input');
+
+input.addEventListener('blur', function() {
+    let str = input.value.split('');
+ 
+    str.reverse()
+    let arr = str[0]
+    if (arr == 3) {
+        console.log('Это число содержит цифру 3')
+    } else {
+        console.log('Число не содержит цифру 3')
+    }
+})
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №11
+
+let paragrah = document.querySelectorAll('p');
+let button = document.querySelector('#button');
+
+button.addEventListener('click', function() {
+    for (let i = 0; i < paragrah.length; i++) {
+        let sum = paragrah[i];
+
+       sum.innerHTML += ' ' + (i+1)
+        console.log(sum)
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+// ЗАДАЧА №12
+
+let links = document.querySelectorAll('a');
+
+for (let link of links) {
+    link.addEventListener('click', function() {
+        link.innerHTML += '(' + link.href + ')'
+    })
+}
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №13
+
+
+let link = document.querySelectorAll('a');
+
+for (let links of link) {
+    links.addEventListener('click', function() {
+    let str = links.toString().indexOf('http://');
+     if (str == 0) {
+        links.innerHTML += '&rarr;';
+     }
+    })
+}
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// ЗАДАЧА №14
+
+let paragrah = document.querySelectorAll('p');
+
+for (let paragraphs of paragrah) {
+ paragraphs.addEventListener('click', function func() {
+   let num = Number(paragraphs.innerHTML);
+    paragraphs.innerHTML = Math.pow(num, 2)
+   paragraphs.removeEventListener('click', func)
+ })
+}
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №15
+
+
+
+
+let input = document.querySelector('input');
+let paragrah = document.querySelector('p');
+
+let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+input.addEventListener('blur', function() {
+    let str = input.value.split('.');
+    str.reverse()
+
+    let date = new Date(Number(str[0]),Number(str[1])-1,Number(str[2]))
+
+    paragrah.innerHTML = 'День недели: ' + date.getDay() + ' - ' + days[date.getDay()];
+}) 
+
+
+    
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+// ЗАДАЧА №16
+
+let input = document.querySelector('input');
+let plus = document.querySelector('#plus');
+let minus = document.querySelector('#minus');
+
+
+
+plus.addEventListener('click', function() {
+   input.value = parseInt(input.value) + 1
+  plus = input.value
+});
+
+minus.addEventListener('click', function() {
+   
+    if ( input.value > 1) { 
+        input.value = parseInt(input.value) - 1
+        minus = input.value
+    }
+    
+})
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ЗАДАЧА №17
+
+// ПО НАЖАТИЮ НА АБЗАЦЫ ЗАПИСЫВАТЬ В INPUT СУММАРНОЕ КОЛИЧЕСТВО НАЖАТИЙ
+
+let input = document.querySelector('input');
+
+let paragrah = document.querySelectorAll('p');
+
+for (let paragraphs of paragrah) {
+    paragraphs.addEventListener('click', function() {
+      let sum = parseInt(paragraphs.innerHTML)
+input.value++
+    })
+}
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ЗАДАЧА №18
+
+// ОБРЕЗКА ТЕКСТА ТАК, ЧТОБЫ СТАЛ ДЛИННОЙ 10 СИМВОЛОВ И В КОНЕЦ ТЕКСТА ДОБАВИТЬ ТРОЕТОЧИЕ
+
+let div = document.querySelectorAll('div');
+
+for (let divs of div) {
+    divs.addEventListener('click', function() {
+       
+            if (divs.textContent.length >= 10) {
+                divs.textContent = divs.textContent.substring(0, 10) + '...'
+            }
+        
+    })
+}
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+
+
+// ЗАДАЧА №19
+
+
+
+// ЧИСЛО ОТ 1 ДО 100 = ЗЕЛЕНЫЙ ЦВЕТ, ЕСЛИ НЕТ КРАСНЫЙ
+
+
+let input = document.querySelector('input');
+
+input.addEventListener('blur', function() {
+    let str = input.value;
+
+    if (str >= 1 && str <= 100) {
+        input.style.background = 'green'
+    } else {
+        input.style.background = 'red'
+    }
+})
+    
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+
+// ЗАДАЧА №20
+
+
+//  ГЕНЕРАЦИЯ СЛУЧАЙНО СТРОКИ
+
+let button = document.querySelector('button');
+let input = document.querySelector('input');
+
+button.addEventListener('click', function() {
+    let str = '';
+  let chat =  '0123456789qwertyuiopasdfghjklzxcvbnm'
+
+    for (let i = 0; i < 8; i++) {
+        str  += chat[Math.floor(Math.random() * chat.length )];
+       input.value = str
+
+    }
+})
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+// ЗАДАЧА №21
+
+
+let input = document.querySelector('input');
+let button = document.querySelector('button');
+let paragrah = document.querySelector('p');
+
+
+button.addEventListener('click', function() {
+   
+       let c =  (input.value - 32) / 1.8
+        paragrah.innerHTML = c
+    
+})
+
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+// ЗАДАЧА №22
+
+
+
+
+
+let input = document.querySelector('input');
+let button = document.querySelector('button');
+let paragrah = document.querySelector('p');
+
+
+
+button.addEventListener('click', function() {
+    let sum = input.value;
+    let f = 1
+
+    for (let i = 1; i <= sum; i++) {
+        f = f * i
+        paragrah.innerHTML = f
+    }
+   
+})
+
+
+
+
+
+
+// -------------------------------------------------------------------------
+
+
+
+
+  </script>
+    </body>
+    </html>
