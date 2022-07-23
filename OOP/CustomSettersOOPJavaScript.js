@@ -42,7 +42,7 @@ let user = new Employee;
 user.setName('Иван');
 user.setSalary('10 тысяч');
 user.setAge('20 лет');
-
+  
 console.log(user.getName())
 console.log(user.getSalary())
 console.log(user.getAge())
